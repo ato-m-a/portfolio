@@ -13,7 +13,7 @@ export const pretendard = localFont({
 })
 
 export const metadata: Metadata = {
-  metadataBase: new URL('http://localhost:3000'),
+  metadataBase: new URL('https://ato-m-a.me'),
   description: '주니어 웹 프론트엔드 개발자 홍준혁입니다. 찾아주셔서 감사합니다!',
   title: '홍준혁 | 웹 프론트엔드 개발자',
   icons: {

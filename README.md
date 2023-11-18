@@ -1,36 +1,71 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# 웹 프론트엔드 개발자 홍준혁입니다.
 
-## Getting Started
+## 목차
 
-First, run the development server:
+- [About Me](#About-Me)
+- [Skills](#Skills)
+- [Experience](#Experience)
+- [가장 몰입했던 경험](#가장-몰입했던-경험)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## About Me
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Node.js, AWS 기반의 3년 차 웹 개발자로 소규모 조직에서 서비스의 개발 주기 전반에 걸쳐 주도적으로 업무를 진행해 왔습니다. 주로 프론트엔드 개발을 담당했으며, 필요에 따라 백엔드 개발 및 인프라 엔지니어링을 겸하였습니다.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+창업 초기 단계의 스타트업에서 시작하며, 고객의 불편함을 더 자세히 살피기 위해 고객사 호텔리어 및 사업주의 목소리 를 직접 들으며 이를 바탕으로 성능 및 인터페이스 개선을 수행하고 기능을 개발하며 고객이 서비스의 가치를 느낄 때가 즐거웠습니다. 이러한 주도적인 업무 수행을 통해 서비스를 성공적으로 출시하고, 그랜드 조선, 켄싱턴 호텔&리조트 등 40개 이상의 고객사를 확보할 수 있었고, 기술 역량 ‘T-4’ 획득에 직접적으로 기여하는 등 회사의 기반 마련에 힘써본 경험이 있습니다.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+마케팅 에이전시에 재직하며 주도적인 학습으로 모던 프론트엔드 기술과 함께 트렌디한 UI/UX를 성공적으로 도입한 경 험이 있습니다. Server-Driven UI를 바탕으로 한 간편 구축 시스템 개발로 동료들의 업무 효율성을 제고했으며, Next.js, React와 같은 구현 기술을 도입하고, 서버 로그 및 Google Analytics를 적극 활용해 디바이스 선호도, 전환율과 같은 수치의 정량적 분석으로 모바일 퍼스트 레이아웃 도입, UI의 A/B테스트를 수행하였습니다. 이를 통해 랜딩 페이지 개선과 이벤트월드 시스템을 구축하고 옥시레킷벤키저, 경상남도 등의 기업 및 기관과 50건 이상의 계약을 체결할 수 있었고 100,000건 이상의 마케팅 활용 고객 DB를 수집해 회사 자금 안정에 기여한 경험이 있습니다.
 
-## Learn More
+개인으로서 하고싶은 프론트엔드 개발 보다는 회사 차원에서 도움이 되는 개발을 수행해야 한다는 생각으로 Node.js 기 반의 풀스택 개발자로 일해왔습니다. 지난 2년간 개발을 해오며, 프론트엔드 영역이 고객을 처음 맞이하고 서비스의 첫인 상을 책임진다는 부분에 매력을 느껴 더 깊이 관여하고자 합니다.
 
-To learn more about Next.js, take a look at the following resources:
+## Skills
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- 이 이력서에는...
+	- Frontend: `Next.js v14.0.3`
+	- 상태관리: `Recoil`
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+- Base
+  - `JavaScript`, `TypeScript`
 
-## Deploy on Vercel
+- Frontend
+  - `React`, `Next.js`, `Recoil`, `React-Query`
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- Backend
+  - `NestJS`
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- Cloud
+  - `Amazon AWS`
+
+## Experience
+
+### [(주)파이토웨이](https://www.phytoway.team/) (2023.07 ~ 2023.10, 3개월)
+	- 연 매출 1백억원 규모의 건강기능식품 제조 / 유통 스타트업
+	- 팀원 | Frontend Engineer
+	- Node.js, NestJS 기반 백엔드 엔지니어링
+	- 데이터 수집 자동화 시스템 구축 및 Microsoft Azure 클라우드 엔지니어링
+
+### [(주)하이브미디어](http://hivemedia.co.kr/) (2022.04 ~ 2023.06, 1년 2개월)
+	- 통합 디지털 마케팅 에이전시
+	- 대리 | Frontend Engineer
+	- React, Next.js 기반 프론트엔드 개발
+	- Node.js, NestJS 기반 백엔드 개발
+	- 기존 비즈니스 레거시 청산 및 IDC 인프라 => Amazon AWS 마이그레이션
+	- Amazon AWS 클라우드 엔지니어링
+
+### [(주)히어로웍스](https://www.heroworks.co.kr) (2021.05 ~ 2022.03, 10개월)
+	- 국내 최초 종합 호스피탈리티 수익 관리 시스템(RMS) 데이터메니티 서비스 스타트업
+	- 매니저 | Fullstack Engineer
+	- 처음부터 구축에 참가하여 서비스 출시까지 경험, 개발 리드 담당
+	- Jinja2 Template, JavaScript 기반의 UI 개발
+	- Flask 기반의 Python REST API 서버 개발
+
+## 가장 몰입했던 경험
+
+저는 개발을 업으로 삼은 직장인이 아닌, 팀과 회사 차원의 임팩트를 이끌어내는 동료 개발자로서 함께하고자 합니다. 마 케팅 에이전시에서 근무하던 당시, 회사의 개발 팀 규모가 상대적으로 작아 웹 이벤트의 어드민 시스템을 개별적으로 제 작하는 데 어려움이 있었습니다. 그렇기에 외주 개발에 많이 의존하였고, 외주 개발팀마다 선호하는 배포 방식이 달라 운 영과 관리 측면에서의 문제와 함께 비용 측면의 문제가 있었습니다.
+
+처음에는, 요건 정의서를 작성하며 외주 팀과 커뮤니케이션을 담당하고자 하였습니다. 하지만 이 방법은 문제를 근본적으 로 해결할 수 없다고 생각했고, 스타트업에서 서비스를 초기부터 구축하며 출시까지 해본 경험을 바탕으로 어드민 시스템 을 클라우드 기반 B2B SaaS로 전환하여 개발하는 새로운 방향을 설정하였고, 이 프로젝트에서 프론트엔드 개발(설계, 상태 관리), 백엔드 개발 및 인프라 엔지니어링을 담당했습니다.
+
+이러한 전환 과정에서 여러 어려움이 있었습니다. 먼저, 단일 어플리케이션으로 다양한 고객에게 서비스를 제공하면서 동 시에 높은 사용자 경험을 줄 수 있어야 했습니다. 이를 달성하기 위해, 확장성을 고려하여 컴포넌트를 추상화하고, TypeScript의 유틸리티 타입과 제네릭을 활용하여 인터페이스를 명확하게 정의하고 타입 안전성을 확보함으로써 고객의 피드백에 유연하게 대응할 수 있는 구조를 마련할 수 있었습니다.
+
+또한, 프로젝트의 복잡성이 증가하며 상태 관리의 단순화가 필요해졌습니다. 사용자 인증, 메뉴 활성화, 중첩된 모달과 같 은 상태의 Props Drilling이 깊어졌고, 처음에는 Context API를 사용해 관리하고자 하였으나 Context의 Provider 또한 복잡함을 더했고, 상태를 구독하는 컴포넌트들의 불필요한 리렌더링 문제 또한 해소되지 않았습니다. 이에 러닝 커브와 프로젝트의 규모를 고려해 전역 상태 관리 도구로 Recoil을 사용하고, 고객 데이터의 비동기 요청을 처리하고 캐싱을 구 성하는 데 React-Query를 사용하여 효과적으로 상태 관리를 단순화할 수 있었습니다.
+
+프로젝트를 마무리하여 2022년 10월 서비스를 정식으로 출시하였고, 구축한 시스템을 통해 개발 리소스를 최적화하고, 운영과 관리의 일관성을 확보할 수 있었습니다. 또, TypeScript를 사용하고 React, Next.js 및 상태 관리 도구와 같은 구현 기술을 이해하고 적용하는 기술적인 도전을 맞이하고 마침내 성취하는 과정이 즐거웠습니다. 또, 도전을 두려워하지 않고 실패하더라도 다음 도전은 더욱 용기있게 시도하는 자세를 얻었습니다.

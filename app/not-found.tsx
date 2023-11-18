@@ -31,7 +31,7 @@ export default function NotFound() {
           😢&nbsp;
           {
             name
-            ? <span className="underline text-gray-500">"{decodeURI(name as string)}"</span>
+            ? <span className="underline text-gray-500">&quot;{decodeURI(name as string)}&quot;</span>
             : '이런!'
           }
           &nbsp;페이지를 찾지 못했어요!

@@ -22,6 +22,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     title: '홍준혁 | 웹 프론트엔드 개발자',
+    url: 'https://ato-m-a.me',
     description: '주니어 웹 프론트엔드 개발자 홍준혁입니다. 찾아주셔서 감사합니다!',
     locale: 'ko_KR',
     siteName: '홍준혁 | 웹 프론트엔드 개발자',

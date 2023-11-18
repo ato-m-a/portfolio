@@ -26,6 +26,11 @@ const Header = (): ReactElement => {
                 <Image src="/images/linkedin.webp" alt="linkedin image" className="w-14 h-14 max-md:w-10 max-md:h-10" width={500} height={500} />
               </a>
             </li>
+            <li>
+              <a href="mailto:atomjh0295@gmail.com">
+                <Image src="/images/gmail.webp" alt="gmail image" className="w-14 h-14 max-md:w-10 max-md:h-10" width={500} height={500} />
+              </a>
+            </li>
           </ul>
         </nav>
       </div>

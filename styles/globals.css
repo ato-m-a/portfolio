@@ -41,6 +41,10 @@ html {
   .hv-underline {
     @apply hover:underline;
   }
+
+  .hv-btn {
+    @apply hover:opacity-90;
+  }
 }
 
 /* non-hover */

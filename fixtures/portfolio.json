@@ -10,5 +10,17 @@
     "page_id": "b5c9f8c2b0354a339676eeba8bdf7e21",
     "cover_image": "/projects/laptop.webp",
     "title": "⚙️ 사전청약 페이지 간편 구축 시스템"
+  },
+  {
+    "name": "청약-시스템-리엔지니어링",
+    "page_id": "7ed2bb9f8f8b4e22a8d803f217203357",
+    "cover_image": "/projects/engineer.webp",
+    "title": "🛠️ 청약 시스템 리엔지니어링"
+  },
+  {
+    "name": "데이터메니티-RMS",
+    "page_id": "ed5300ecb06b41a697d81e517012fd2f",
+    "cover_image": "/projects/revenue.webp",
+    "title": "📈 데이터메니티 RMS(수익 관리 시스템)"
   }
 ]

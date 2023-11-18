@@ -15,7 +15,7 @@ const Header = ({ src, title }: HeaderProps): ReactElement => {
   return (
     <>
       <div className="relative w-full h-1/4 overflow-hidden" ref={imageWrapperRef}>
-        <Image src={src} alt="header image" className="object-cover w-full h-full" width={500} height={500} />
+        <Image src={src} alt="header image" className="object-cover w-full h-full" width={2000} height={2000} quality={100} loading="eager" />
       </div>
       <h1 className="notion-page inline-block font-pretendard font-semibold text-4xl !pt-10 !pb-2 max-md:text-3xl" ref={headingRef}>{title}</h1>
     </>

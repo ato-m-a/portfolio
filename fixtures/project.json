@@ -83,7 +83,7 @@
         "outer": "IDC 인프라에서 Amazon AWS로 마이그레이션",
         "inner": [
           "AWS S3, CloudFront로 정적 페이지 배포",
-          "Github Actions, Code Deploy를 사용한 CI/CD 구축"
+          "Github Actions를 사용한 CI/CD 구축"
         ]
       }
     ],

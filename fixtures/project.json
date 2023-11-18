@@ -1,0 +1,123 @@
+[
+  {
+    "order": 1,
+    "name": "사전청약 페이지 간편 구축 시스템",
+    "at": "(주)하이브미디어",
+    "period": "2022.10 ~ 2022.11 (1개월)",
+    "description": "Server-Driven UI로 간편하게 사전청약 페이지를 수정 혹은 개설하는 시스템",
+    "role": "풀스택 개발",
+    "participants": 2,
+    "bullets": [
+      { 
+        "outer": "Next.js 기반 메인 클라이언트 사이드 개발",
+        "inner": [
+          "SSR 기반으로 설정된 UI를 렌더링"
+        ]
+      },
+      {
+        "outer": "React 기반 운영 백오피스 개발(업로드, 입력, 테넌트 관리)",
+        "inner": [
+          "aws-sdk를 사용한 S3 업로드 및 캐시 무효화 작업 수행",
+          "서브도메인으로 테넌트 구분, NestJS 기반 인증/인가 서버에서 테넌트별 권한 관리"
+        ]
+      },
+      {
+        "outer": "Node.js 기반 REST API 개발(CRUD)",
+        "inner": [
+          "AWS Lambda, API Gateway(인터페이스)를 사용한 서버리스 아키텍처",
+          "관심고객등록 입력 폼 및 UI 설정을 NoSQL(AWS DynamoDB)에 저장"
+        ]
+      }
+    ],
+    "path": "/portfolio/사전청약-페이지-간편-구축-시스템"
+  },
+  {
+    "order": 2,
+    "name": "이벤트월드",
+    "at": "(주)하이브미디어",
+    "period": "2022.06 ~ 2022.09 (3개월)",
+    "description": "웹 이벤트 광고주 어드민 시스템의 B2B SaaS 전환 프로젝트",
+    "role": "풀스택 개발",
+    "participants": 3,
+    "bullets": [
+      {
+        "outer": "Next.js 기반 CRM 대시보드 개발",
+        "inner": [
+          "SSR(React-Query) 기반으로 고객 데이터 렌더링 및 캐싱 전략 구성",
+          "Recharts 사용한 데이터 시각화(전환수, 방문수 등) 컴포넌트 제작",
+          "여러 단계의 독립된 모달을 겹쳐 표시하며 Recoil을 사용한 상태관리 도입",
+          "PM2 프로세스 매니저를 사용한 무중단 배포 구축"
+        ]
+      },
+      {
+        "outer": "React 기반 운영 백오피스 개발 (테넌트 및 고객사 관리)",
+        "inner": [
+          "이벤트 단위를 테넌트로 하여 서브도메인으로 구분, NestJS 기반 인증/인가 서버에서 테넌트별 권한 관리"
+        ]
+      },
+      {
+        "outer": "Node.js 기반 REST API 개발(CRUD)"
+      }
+    ],
+    "path": "/portfolio/이벤트월드-SaaS-전환"
+  },
+  {
+    "order": 3,
+    "name": "청약 시스템 리엔지니어링",
+    "at": "(주)하이브미디어",
+    "period": "2022.04 ~ 2022.05, (1개월)",
+    "description": "기존 비즈니스 레거시 청산 및 인프라 마이그레이션",
+    "role": "풀스택 개발",
+    "participants": 2,
+    "bullets": [
+      { 
+        "outer": "PHP 뷰 페이지의 비즈니스 로직 분리 및 HTML, JavaScript 기반으로 전환" 
+      },
+      {
+        "outer": "NestJS 기반 REST API 서버 개발(전사 시스템 인증/인가)",
+        "inner": [
+          "AWS EC2, ELB를 사용해 배포 및 응용 계층 라우팅 구성"
+        ]
+      },
+      {
+        "outer": "IDC 인프라에서 Amazon AWS로 마이그레이션",
+        "inner": [
+          "AWS S3, CloudFront로 정적 페이지 배포",
+          "Github Actions, Code Deploy를 사용한 CI/CD 구축"
+        ]
+      }
+    ],
+    "path": null
+  },
+  {
+    "order": 4,
+    "name": "데이터메니티 RMS",
+    "at": "(주)히어로웍스",
+    "period": "2021.05 ~ 2021.09 (4개월)",
+    "description": "주변/설정 호텔과 가격을 비교할 수 있는 다양한 시각화 기능을 제공하는 RMS(수익 관리 시스템)",
+    "role": "풀스택 개발",
+    "participants": 4,
+    "bullets": [
+      {
+        "outer": "jQuery => JavaScript 리팩토링, 이미지 포맷(WebP) 변경"
+      },
+      {
+        "outer": "월간 페이지의 가격 조회를 일 단위 비동기 요청과 동적 렌더링으로 변경하여 FCP를 10초에서 3초 수준으로 개선",
+        "inner": [
+          "사용자 경험 저해를 최소화하기 위해 Fallback UI 표시",
+          "일 단위 조회 시 요청 오버헤드로 인해 조회 로직을 AWS Lambda로 분리"
+        ]
+      },
+      {
+        "outer": "d3.js, toast-ui를 사용한 주간/월간 가격 변동 추이 시각화"
+      },
+      {
+        "outer": "7개 OTA의 데이터 스크래핑 자동화 시스템 구축",
+        "inner": [
+          "AWS ECR, ECS(Fargate), Batch 기반으로 전환하여 일 평균 105$ 에서 18$ 수준으로 비용 절감"
+        ]
+      }
+    ],
+    "path": null
+  }
+]

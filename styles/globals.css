@@ -1,0 +1,81 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+}
+
+
+.head-down {
+  backdrop-filter: blur(4px);
+  background-color: rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease;
+}
+
+.list-indent {
+  list-style-type: circle;
+}
+
+.remote-wrapper {
+  @apply rounded-full shadow-xl bg-white border px-4 py-4 transition-all ease-in-out duration-500;
+}
+
+.remote-button {
+  @apply rounded-[50%] flex items-center justify-center w-10 h-10 shadow-xl cursor-pointer text-xl;
+  @apply transition-all ease-in-out origin-center duration-300;
+}
+
+/* hover */
+@media (hover: hover) {
+  .remote-button:hover {
+    @apply hover:bg-gray-100 hover:scale-150;
+  }
+
+  .hv-underline {
+    @apply hover:underline;
+  }
+}
+
+/* non-hover */
+@media (hover: none) {
+  .hv-underline {
+    @apply underline;
+  }
+}
+
+.tech-stack {
+  color: #999;
+}
+
+.tech-stack::before {
+  background-color: #d0d0d0;
+  content: "";
+  display: inline-block;
+  height: 20px;
+  margin-left: 10px;
+  margin-right: 10px;
+  transform: skew(-15deg,-15deg);
+  vertical-align: middle;
+  width: 1px;
+}
+
+.tech-stack:first-child::before {
+  display: none;
+}
+
+@media screen and (max-width: 991px) {
+  .tech-stack::before {
+    height: 15px;
+  }
+}
+
+.notion-inline-code {
+  color: inherit !important;
+}

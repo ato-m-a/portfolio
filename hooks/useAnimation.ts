@@ -1,6 +1,6 @@
 import { useEffect, type RefObject } from 'react';
 
-export const useAnimation = (ref: RefObject<HTMLElement>) => {
+export const useAnimation = (ref: RefObject<HTMLElement>, onlyAtMounted: boolean = false) => {
   useEffect(() => {
     const element = ref.current;
     const easeOutQuad = (t: number) => t * (2 - t);
@@ -57,6 +57,7 @@ export const useAnimation = (ref: RefObject<HTMLElement>) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
           animateIn();
+          if (onlyAtMounted) observer.unobserve(entry.target);
         } else {
           animateOut();
         }

@@ -10,7 +10,7 @@ import { Modal } from 'react-notion-x/build/third-party/modal';
 
 const Notion = ({ recordMap }: { recordMap: any }) => {
   const wrapperRef = useRef<HTMLDivElement>(null);
-  useAnimation(wrapperRef);
+  useAnimation(wrapperRef, true);
 
   return (
     <div ref={wrapperRef} className="bg-notion-bg">

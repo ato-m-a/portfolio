@@ -1,5 +1,7 @@
 # 웹 프론트엔드 개발자 홍준혁입니다.
 
+![image](https://github.com/ato-m-a/portfolio/assets/99224451/8e33f393-a346-4182-bf04-b25e1660da99)
+
 ## 목차
 
 - [About Me](#About-Me)

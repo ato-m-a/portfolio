@@ -1,17 +1,10 @@
-"use client";
-
-import { Bullet, DividedRow } from '@/components/layout';
-import { useAnimation } from '@/hooks/useAnimation';
+import { AnimatedWrapper, Bullet, DividedRow } from '@/components/layout';
 import type { Career } from '@/types/common/fixtures';
 import type { ReactElement } from 'react';
-import { useRef } from 'react';
 
 const Content = ({ company, url, position, period, description, bullets }: Career): ReactElement => {
-  const listitemRef = useRef<HTMLLIElement>(null);
-  useAnimation(listitemRef);
-
   return (
-    <li className="my-10" ref={listitemRef}>
+    <AnimatedWrapper>
       <DividedRow.responsiveWrapper>
         <DividedRow.titleColumn>
           <h3 className="text-4xl my-2">{company}</h3>
@@ -32,7 +25,7 @@ const Content = ({ company, url, position, period, description, bullets }: Caree
           </ul>
         </DividedRow.contentColumn>
       </DividedRow.responsiveWrapper>
-    </li>
+    </AnimatedWrapper>
   )
 }
 

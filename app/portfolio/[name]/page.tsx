@@ -1,5 +1,3 @@
-"use server";
-
 import { FixtureRepository } from '@/common/repository';
 import * as Notion from '@/components/sections/portfolio';
 import type { Portfolio } from '@/types/common/fixtures';

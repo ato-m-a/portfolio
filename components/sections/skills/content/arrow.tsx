@@ -1,3 +1,5 @@
+"use client";
+
 import styled from 'styled-components';
 
 const Arrow = styled.span<{ $activate: boolean; }>`

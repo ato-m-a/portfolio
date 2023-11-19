@@ -3,7 +3,7 @@
 import Emoji from '@/components/layout/emoji';
 import { useCallback, type ReactElement } from 'react';
 
-const RemoteControl = (): ReactElement => {
+const Body = (): ReactElement => {
   const goTo = useCallback((id: string) => {
     const element = document.getElementById(id);
 
@@ -27,4 +27,4 @@ const RemoteControl = (): ReactElement => {
   )
 }
 
-export default RemoteControl;
+export default Body;

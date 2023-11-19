@@ -1,7 +1,6 @@
 import { FixtureRepository } from '@/common/repository';
 import { ScrollSaver } from '@/components/common';
 import { Emoji, Floating, RemoteControl, Section, TextHighlight } from '@/components/layout';
-import Header from '@/components/layout/header';
 import { About, Experience, Project, Skills } from '@/components/sections';
 import type { Career, Project as Projects, Skill } from '@/types/common/fixtures';
 
@@ -12,7 +11,6 @@ export default function Home() {
 
   return (
     <>
-      <Header />
       {/* About Me */}
       <Section.wrapper className="pt-80 max-md:pt-40" id="about">
         <Section.header>

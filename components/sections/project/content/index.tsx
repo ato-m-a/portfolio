@@ -1,19 +1,13 @@
-"use client";
-
-import { Bullet, DividedRow } from '@/components/layout';
-import { useAnimation } from '@/hooks/useAnimation';
+import { AnimatedWrapper, Bullet, DividedRow } from '@/components/layout';
 import type { Project } from '@/types/common/fixtures';
 import Link from 'next/link';
-import { useRef, type ReactElement } from 'react';
+import type { ReactElement } from 'react';
 
 const Content = (project: Project): ReactElement => {
   const { at, name, participants, role, period, bullets, path } = project;
 
-  const liRef = useRef<HTMLLIElement>(null);
-  useAnimation(liRef);
-
   return (
-    <li className="my-10" ref={liRef}>
+    <AnimatedWrapper>
       <DividedRow.responsiveWrapper>
         <DividedRow.titleColumn>
           {
@@ -39,7 +33,7 @@ const Content = (project: Project): ReactElement => {
           </ul>
         </DividedRow.contentColumn>
       </DividedRow.responsiveWrapper>
-    </li>
+    </AnimatedWrapper>
   )
 }
 

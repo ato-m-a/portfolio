@@ -1,9 +1,11 @@
 "use client";
 
+import { useAnimation } from '@/hooks/useAnimation';
 import localFont from 'next/font/local';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useParams } from 'next/navigation';
+import { useRef } from 'react';
 
 const pretendard = localFont({
   src: '../public/fonts/PretendardVariable.woff2',
@@ -19,9 +21,11 @@ const dejavuSansMono = localFont({
 
 export default function NotFound() {
   const { name } = useParams();
+  const figureRef = useRef<HTMLElement>(null);
+  useAnimation(figureRef, true);
 
   return (
-    <figure className="w-screen h-screen bg-gray-100 flex flex-col justify-center items-center max-md:px-10">
+    <figure className="w-screen h-screen bg-gray-100 flex flex-col justify-center items-center max-md:px-10" ref={figureRef}>
       <div className="w-100 h-100 rounded-xl overflow-hidden shadow-xl border border-gray-300">
         <Image src="/images/not-found.webp" alt="404" className="w-full h-full" width={500} height={500} priority={true} />
       </div>

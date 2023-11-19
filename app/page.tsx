@@ -1,4 +1,5 @@
 import { FixtureRepository } from '@/common/repository';
+import { ScrollSaver } from '@/components/common';
 import { Emoji, Floating, RemoteControl, Section, TextHighlight } from '@/components/layout';
 import Header from '@/components/layout/header';
 import { About, Experience, Project, Skills } from '@/components/sections';
@@ -100,6 +101,7 @@ export default function Home() {
       <Floating.wrapper className="font-pretendard font-thin p-2 bottom-2 left-2 max-md:text-sm">
         <p>2023년 11월 19일 업데이트</p>
       </Floating.wrapper>
+      <ScrollSaver />
       <RemoteControl />
     </>
   )

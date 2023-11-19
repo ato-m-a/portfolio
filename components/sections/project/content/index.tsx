@@ -9,11 +9,11 @@ import { useRef, type ReactElement } from 'react';
 const Content = (project: Project): ReactElement => {
   const { at, name, participants, role, period, bullets, path } = project;
 
-  const listitemRef = useRef<HTMLLIElement>(null);
-  useAnimation(listitemRef);
+  const liRef = useRef<HTMLLIElement>(null);
+  useAnimation(liRef);
 
   return (
-    <li className="my-10" ref={listitemRef}>
+    <li className="my-10" ref={liRef}>
       <DividedRow.responsiveWrapper>
         <DividedRow.titleColumn>
           {

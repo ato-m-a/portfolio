@@ -2,16 +2,12 @@
 
 import { useAnimation } from '@/hooks/useAnimation';
 import Image from 'next/image';
-import { useMemo, useRef, type ReactElement } from 'react';
+import { useRef, type ReactElement } from 'react';
 import { HeaderProps } from './types/header';
 
 const Header = ({ src, title }: HeaderProps): ReactElement => {
   const imageWrapperRef = useRef<HTMLDivElement>(null);
   const headingRef = useRef<HTMLHeadingElement>(null);
-
-  const blurred = useMemo(() => {
-    return src.replace('.webp', '-blur.webp');
-  }, []);
 
   useAnimation(imageWrapperRef, true);
   useAnimation(headingRef, true);
@@ -23,8 +19,6 @@ const Header = ({ src, title }: HeaderProps): ReactElement => {
           src={src} 
           alt="header image" 
           className="object-cover w-full h-full" 
-          placeholder="blur"
-          blurDataURL={blurred}
           width={2000} 
           height={2000} 
           quality={100} 

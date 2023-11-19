@@ -9,7 +9,7 @@ const Wrapper: ReactFC = ({ children }) => {
   useAnimation(wrapperRef, true);
 
   return (
-    <div className="bg-notion-bg w-screen h-screen" ref={wrapperRef}>
+    <div className="bg-gray-100 w-screen h-screen" ref={wrapperRef}>
       {children}
     </div>
   )

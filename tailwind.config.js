@@ -9,8 +9,7 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        'primary': '#333333',
-        'notion-bg': '#F3F4F6'
+        'primary': '#333333'
       },
       fontFamily: {
         'pretendard': ['var(--font-pretendard)', 'sans-serif']

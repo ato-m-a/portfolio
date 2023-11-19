@@ -8,7 +8,7 @@ import { Modal } from 'react-notion-x/build/third-party/modal';
 
 const Notion = ({ recordMap }: { recordMap: any }) => {
   return (
-    <div className="bg-notion-bg">
+    <div className="bg-gray-100">
       <NotionRenderer recordMap={recordMap} components={{ Code, Collection, Equation, Modal }} />
     </div>
   )

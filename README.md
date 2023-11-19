@@ -5,7 +5,7 @@
 ## 개발 환경
 
 - Language: `TypeScript`
-- OS: `MacOS(M1, ARM64) Sonoma 14.1.1`
+- OS: `MacOS(M1, ARM64) Sonoma` 14.1.1
 - Runtime: `Node.js` v18.18.1
 - Package Manager: `npm` v10.2.1
 - Framework: `Next.js` v14.0.3
@@ -55,59 +55,59 @@ Node.js, AWS 기반의 3년 차 웹 개발자로 소규모 조직에서 서비�
 ## Experience
 
 ### [(주)파이토웨이](https://www.phytoway.team/) (2023.07 ~ 2023.10, 3개월)
-	- 연 매출 1백억원 규모의 건강기능식품 제조 / 유통 스타트업
-	- 팀원 | Frontend Engineer
-	- Node.js, NestJS 기반 백엔드 엔지니어링
-	- 데이터 수집 자동화 시스템 구축 및 Microsoft Azure 클라우드 엔지니어링
+- 연 매출 1백억원 규모의 건강기능식품 제조 / 유통 스타트업
+- 팀원 | Frontend Engineer
+- Node.js, NestJS 기반 백엔드 엔지니어링
+- 데이터 수집 자동화 시스템 구축 및 Microsoft Azure 클라우드 엔지니어링
 
 ### [(주)하이브미디어](http://hivemedia.co.kr/) (2022.04 ~ 2023.06, 1년 2개월)
-	- 통합 디지털 마케팅 에이전시
-	- 대리 | Frontend Engineer
-	- React, Next.js 기반 프론트엔드 개발
-	- Node.js, NestJS 기반 백엔드 개발
-	- 기존 비즈니스 레거시 청산 및 IDC 인프라 => Amazon AWS 마이그레이션
-	- Amazon AWS 클라우드 엔지니어링
+- 통합 디지털 마케팅 에이전시
+- 대리 | Frontend Engineer
+- React, Next.js 기반 프론트엔드 개발
+- Node.js, NestJS 기반 백엔드 개발
+- 기존 비즈니스 레거시 청산 및 IDC 인프라 => Amazon AWS 마이그레이션
+- Amazon AWS 클라우드 엔지니어링
 
 ### [(주)히어로웍스](https://www.heroworks.co.kr) (2021.05 ~ 2022.03, 10개월)
-	- 국내 최초 종합 호스피탈리티 수익 관리 시스템(RMS) 데이터메니티 서비스 스타트업
-	- 매니저 | Fullstack Engineer
-	- 처음부터 구축에 참가하여 서비스 출시까지 경험, 개발 리드 담당
-	- Jinja2 Template, JavaScript 기반의 UI 개발
-	- Flask 기반의 Python REST API 서버 개발
+- 국내 최초 종합 호스피탈리티 수익 관리 시스템(RMS) 데이터메니티 서비스 스타트업
+- 매니저 | Fullstack Engineer
+- 처음부터 구축에 참가하여 서비스 출시까지 경험, 개발 리드 담당
+- Jinja2 Template, JavaScript 기반의 UI 개발
+- Flask 기반의 Python REST API 서버 개발
 
 ## Project
 
 ### 사전청약 페이지 간편 구축 시스템
-	- (주)하이브미디어 (2인) - 프론트엔드 개발
-	- 2022.10 ~ 2022.11 (1개월)
-	- Next.js 기반 메인 클라이언트 사이드 개발 (SSR, 상태관리 로직 구현)
-		- SSR 기반의 Server-Driven UI 구현
-	- React 기반 운영 백오피스 개발
+- (주)하이브미디어 (2인) - 프론트엔드 개발
+- 2022.10 ~ 2022.11 (1개월)
+- Next.js 기반 메인 클라이언트 사이드 개발 (SSR, 상태관리 로직 구현)
+	- SSR 기반의 Server-Driven UI 구현
+- React 기반 운영 백오피스 개발
 
 ### 이벤트월드 SaaS 전환
-	- (주)하이브미디어 (3인) - 풀스택 개발
-	- 2022.06 ~ 2022.09 (3개월)
-	- Next.js 기반 CRM 대시보드 개발 (SSR, 상태관리 로직 구현)
-		- Recharts 사용한 데이터 시각화 컴포넌트 제작
-		- Recoil을 사용한 상태관리 로직 구현
-	- React 기반 운영 백오피스 개발
-	- Node.js 함수 핸들러 기반 REST API 개발 (AWS Lambda, API Gateway)
+- (주)하이브미디어 (3인) - 풀스택 개발
+- 2022.06 ~ 2022.09 (3개월)
+- Next.js 기반 CRM 대시보드 개발 (SSR, 상태관리 로직 구현)
+	- Recharts 사용한 데이터 시각화 컴포넌트 제작
+	- Recoil을 사용한 상태관리 로직 구현
+- React 기반 운영 백오피스 개발
+- Node.js 함수 핸들러 기반 REST API 개발 (AWS Lambda, API Gateway)
 
 ### 청약 시스템 리엔지니어링
-	- (주)하이브미디어 (2인) - 풀스택 개발
-	- 2022.04 ~ 2022.05 (1개월)
-	- PHP 뷰 페이지의 비즈니스 로직 분리, HTML, JS 기반으로 전환
-		- NestJS 기반 전사 인증/인가 시스템 백엔드 개발
-	- IDC 인프라에서 Amazon AWS 마이그레이션 수행
+- (주)하이브미디어 (2인) - 풀스택 개발
+- 2022.04 ~ 2022.05 (1개월)
+- PHP 뷰 페이지의 비즈니스 로직 분리, HTML, JS 기반으로 전환
+	- NestJS 기반 전사 인증/인가 시스템 백엔드 개발
+- IDC 인프라에서 Amazon AWS 마이그레이션 수행
 
 ### 데이터메니티 RMS(수익 관리 시스템)
-	- (주)히어로웍스 (4인) - 풀스택 개발
-	- 2021.05 ~ 2021.09 (4개월)
-	- Jinja2 Template, JavaScript 기반의 UI 개발
-		- d3.js, toast-ui 사용한 데이터 시각화 제작
-	- 7개 OTA의 객실 가격 데이터 스크래핑 자동화 시스템 구축
-		- AWS ECR(Docker), Batch, ECS(Fargate) 사용한 배치 시스템 구축
-	- Flask 기반의 Python REST API 개발
+- (주)히어로웍스 (4인) - 풀스택 개발
+- 2021.05 ~ 2021.09 (4개월)
+- Jinja2 Template, JavaScript 기반의 UI 개발
+	- d3.js, toast-ui 사용한 데이터 시각화 제작
+- 7개 OTA의 객실 가격 데이터 스크래핑 자동화 시스템 구축
+	- AWS ECR(Docker), Batch, ECS(Fargate) 사용한 배치 시스템 구축
+- Flask 기반의 Python REST API 개발
 
 ## 주요 구현 사항
 

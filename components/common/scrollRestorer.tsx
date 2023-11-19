@@ -1,29 +1,26 @@
 "use client";
 
-import { offsetState } from '@/store/offset';
 import { usePathname } from 'next/navigation';
 import { useEffect, type ReactElement } from 'react';
-import { useRecoilValue } from 'recoil';
 
 const ScrollRestorer = (): ReactElement => {
-  const currentOffset = useRecoilValue(offsetState);
   const pathname = usePathname();
 
-  if (process.env.NODE_ENV === 'development') {
-    console.log(currentOffset);
-  }
-
   useEffect(() => {
-    if (pathname === '/') {
-      if (currentOffset === 0) return;
+    const currentOffset = window.sessionStorage.getItem('offset');
 
-      window.scrollTo({ top: currentOffset, left: 0, behavior: 'instant' });
-      return;
-    }
+    if (currentOffset) {
+      const parsed = parseFloat(currentOffset);
 
-    if (pathname.includes('/portfolio')) {
-      window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
-      return;
+      if (pathname === '/') {
+        window.scrollTo({ top: parsed, left: 0, behavior: 'instant' });
+        return;
+      }
+
+      if (pathname.includes('/portfolio')) {
+        window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
+        return;
+      }
     }
   }, [pathname]);
 

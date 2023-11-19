@@ -126,5 +126,5 @@ Node.js, AWS 기반의 3년 차 웹 개발자로 소규모 조직에서 서비�
 
 2. 포트폴리오 상세 페이지 이동 후, 뒤로가기 시 스크롤 위치가 제멋대로인 현상이 발생했습니다.
 	- `next/navigation` 의 `usePathname` 를 사용해 페이지에 따라 다른 `scrollTo` 메소드를 호출하도록 했습니다.
-	- `recoil` 을 통해 루트 경로의 `window.scrollY` 상태를 저장하도록 구현했습니다.
+	- `sessionStorage` 를 통해 루트 경로의 `window.scrollY` 상태를 저장하도록 구현했습니다.
 	- 아직 불안정한 것 같습니다. `next/router` 의 `router.events` 를 대체할 수 있는 더 좋은 방법을 찾아보겠습니다.

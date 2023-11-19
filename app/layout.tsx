@@ -10,7 +10,7 @@ const pretendard = localFont({
   src: '../public/fonts/PretendardVariable.woff2',
   display: 'swap',
   variable: '--font-pretendard'
-})
+});
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://ato-m-a.me'),
@@ -65,7 +65,7 @@ export default function RootLayout({ children }: LayoutProps) {
           `}
         </Script>
       </head>
-      <body className="bg-gray-100">
+      <body className={`bg-gray-100 ${pretendard.className}`}>
         <Recoil>
           {children}
           <ScrollRestorer />

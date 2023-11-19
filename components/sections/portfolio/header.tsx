@@ -16,7 +16,7 @@ const Header = ({ src, title }: HeaderProps): ReactElement => {
           priority={true}
         />
       </div>
-      <h1 className="notion-page inline-block font-pretendard font-semibold text-4xl !pt-10 !pb-2 max-md:text-3xl">{title}</h1>
+      <h1 className="notion-page inline-block font-semibold text-4xl !pt-10 !pb-2 max-md:text-3xl">{title}</h1>
     </>
   )
 }

@@ -11,9 +11,6 @@ module.exports = {
       colors: {
         'primary': '#333333'
       },
-      fontFamily: {
-        'pretendard': ['var(--font-pretendard)', 'sans-serif']
-      },
       screens: {
         'custom-lg' : '992px',
         'max-lg': {'max': '992px'},

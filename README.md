@@ -2,6 +2,15 @@
 
 ![image](https://github.com/ato-m-a/portfolio/assets/99224451/8e33f393-a346-4182-bf04-b25e1660da99)
 
+## 개발 환경
+
+- Language: `TypeScript`
+- OS: `MacOS(M1, ARM64) Sonoma 14.1.1`
+- Runtime: `Node.js` v18.18.1
+- Package Manager: `npm` v10.2.1
+- Framework: `Next.js` v14.0.3
+- State Management: `Recoil` v0.7.7
+
 ## 목차
 
 - [About Me](#About-Me)
@@ -103,7 +112,7 @@ Node.js, AWS 기반의 3년 차 웹 개발자로 소규모 조직에서 서비�
 ## 주요 구현 사항
 
 1. Recoil을 사용한 상태관리
-	- [Recoil](https://recoiljs.org/)을 사용하여 `아코디언 컴포넌트` 및 `스크롤 위치(offsetY)` 상태관리를 구현하였습니다.
+	- [Recoil](https://github.com/facebookexperimental/Recoil)을 사용하여 `아코디언 컴포넌트` 및 `스크롤 위치(offsetY)` 상태관리를 구현하였습니다.
 
 2. 포트폴리오 상세 페이지는 ![Notion](https://img.shields.io/badge/Notion-black?logo=Notion) 페이지를 보여드리도록 구현했습니다.
 	- [notion-client](https://www.npmjs.com/package/notion-client) API를 사용해 노션 페이지의 데이터를 가져왔습니다.
@@ -113,7 +122,7 @@ Node.js, AWS 기반의 3년 차 웹 개발자로 소규모 조직에서 서비�
 ## 개발 중 이슈
 
 1. Notion API를 사용한 포트폴리오 상세 페이지의 로딩 시간이 너무 오래 걸리는 문제가 있었습니다.
-	- ![React](https://img.shields.io/badge/React-black?logo=React) 기반 CSR에서, ![Next.js](https://img.shields.io/badge/Next.js-black?logo=Next.js) 기반 SSR로 이전하였습니다.
+	- [React](https://github.com/facebook/react) 기반 CSR에서, [Next.js](https://github.com/vercel/next.js) 기반 SSR로 이전하였습니다.
 
 2. 포트폴리오 상세 페이지 이동 후, 뒤로가기 시 스크롤 위치가 제멋대로인 현상이 발생했습니다.
 	- `next/navigation` 의 `usePathname` 를 사용해 페이지에 따라 다른 `scrollTo` 메소드를 호출하도록 했습니다.

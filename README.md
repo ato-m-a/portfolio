@@ -8,8 +8,8 @@
 - [Skills](#Skills)
 - [Experience](#Experience)
 - [Project](#Project)
-- [📝 주요 구현 사항](#📝-주요-구현-사항)
-- [🐛 개발 중 이슈](#🐛-개발-중-이슈)
+- [주요 구현 사항](#주요-구현-사항)
+- [개발 중 이슈](#개발-중-이슈)
 
 ## About Me
 
@@ -100,7 +100,7 @@ Node.js, AWS 기반의 3년 차 웹 개발자로 소규모 조직에서 서비�
 		- AWS ECR(Docker), Batch, ECS(Fargate) 사용한 배치 시스템 구축
 	- Flask 기반의 Python REST API 개발
 
-## 📝 주요 구현 사항
+## 주요 구현 사항
 
 1. Recoil을 사용한 상태관리
 	- [Recoil](https://recoiljs.org/)을 사용하여 `아코디언 컴포넌트` 및 `스크롤 위치(offsetY)` 상태관리를 구현하였습니다.
@@ -110,7 +110,7 @@ Node.js, AWS 기반의 3년 차 웹 개발자로 소규모 조직에서 서비�
 	- 응답받은 `recordMap`을 [react-notion-x](https://www.npmjs.com/package/react-notion-x)의 `NotionRenderer` 컴포넌트에 넘겨주어 렌더링합니다.
 	
 
-## 🐛 개발 중 이슈
+## 개발 중 이슈
 
 1. Notion API를 사용한 포트폴리오 상세 페이지의 로딩 시간이 너무 오래 걸리는 문제가 있었습니다.
 	- ![React](https://img.shields.io/badge/React-black?logo=React) 기반 CSR에서, ![Next.js](https://img.shields.io/badge/Next.js-black?logo=Next.js) 기반 SSR로 이전하였습니다.

@@ -16,6 +16,8 @@ export const useScroll = (height: number) => {
   };
 
   useEffect(() => {
+    handleScroll();
+
     window.addEventListener('scroll', handleScroll);
     return () => {
       window.removeEventListener('scroll', handleScroll);

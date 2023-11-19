@@ -13,7 +13,7 @@ const Content: ReactFC<ContentProps> = ({ children, id, bullets }) => {
 
   return (
     <li>
-      <div className="relative px-4 py-4 border border-gray-400 shadow cursor-pointer font-semibold" onClick={toggleAccordion}>
+      <div className="relative px-4 py-4 border border-gray-400 shadow cursor-pointer font-medium" onClick={toggleAccordion}>
         {children}
         <Arrow $activate={isActivate} className="block absolute w-4 h-2 right-4 bg-center bg-no-repeat bg-cover" />
       </div>

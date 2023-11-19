@@ -1,5 +1,4 @@
 import { Recoil, ScrollRestorer } from '@/components/common';
-import { Header } from '@/components/layout';
 import type { LayoutProps } from '@/types/components/layout';
 import type { Metadata } from 'next';
 import localFont from 'next/font/local';
@@ -68,7 +67,6 @@ export default function RootLayout({ children }: LayoutProps) {
       </head>
       <body className="bg-gray-100">
         <Recoil>
-          <Header />
           {children}
           <ScrollRestorer />
         </Recoil>

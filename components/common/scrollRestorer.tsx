@@ -25,7 +25,7 @@ const ScrollRestorer = (): ReactElement => {
       window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
       return;
     }
-  }, [pathname, currentOffset]);
+  }, [pathname]);
 
   return (
     <div id="scroll-restorer" className="opacity-0 w-0 h-0" />

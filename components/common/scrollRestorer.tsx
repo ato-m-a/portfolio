@@ -9,6 +9,10 @@ const ScrollRestorer = (): ReactElement => {
   const currentOffset = useRecoilValue(offsetState);
   const pathname = usePathname();
 
+  if (process.env.NODE_ENV === 'development') {
+    console.log(currentOffset);
+  }
+
   useEffect(() => {
     if (pathname === '/') {
       if (currentOffset === 0) return;
@@ -21,7 +25,7 @@ const ScrollRestorer = (): ReactElement => {
       window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
       return;
     }
-  }, [pathname]);
+  }, [pathname, currentOffset]);
 
   return (
     <div id="scroll-restorer" className="opacity-0 w-0 h-0" />

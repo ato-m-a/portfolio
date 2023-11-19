@@ -1,20 +1,13 @@
 "use client";
 
-import { useAnimation } from '@/hooks/useAnimation';
 import Image from 'next/image';
-import { useRef, type ReactElement } from 'react';
+import { type ReactElement } from 'react';
 import { HeaderProps } from './types/header';
 
 const Header = ({ src, title }: HeaderProps): ReactElement => {
-  const imageWrapperRef = useRef<HTMLDivElement>(null);
-  const headingRef = useRef<HTMLHeadingElement>(null);
-
-  useAnimation(imageWrapperRef, true);
-  useAnimation(headingRef, true);
-
   return (
     <>
-      <div className="relative w-full h-1/4 overflow-hidden" ref={imageWrapperRef}>
+      <div className="relative w-full h-1/4 overflow-hidden">
         <Image 
           src={src} 
           alt="header image" 
@@ -22,9 +15,10 @@ const Header = ({ src, title }: HeaderProps): ReactElement => {
           width={2000} 
           height={2000} 
           quality={100} 
+          priority={true}
         />
       </div>
-      <h1 className="notion-page inline-block font-pretendard font-semibold text-4xl !pt-10 !pb-2 max-md:text-3xl" ref={headingRef}>{title}</h1>
+      <h1 className="notion-page inline-block font-pretendard font-semibold text-4xl !pt-10 !pb-2 max-md:text-3xl">{title}</h1>
     </>
   )
 }

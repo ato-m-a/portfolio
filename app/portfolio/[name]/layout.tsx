@@ -1,3 +1,4 @@
+import * as Notion from '@/components/sections/portfolio';
 import type { LayoutProps } from '@/types/components/layout';
 
 import 'katex/dist/katex.min.css';
@@ -6,8 +7,8 @@ import 'react-notion-x/src/styles.css';
 
 export default function PortfolioLayout({ children }: LayoutProps) {
   return (
-    <div className="bg-notion-bg w-screen h-screen">
+    <Notion.wrapper>
       {children}
-    </div>
+    </Notion.wrapper>
   )
 }

@@ -34,9 +34,9 @@ export const selectObserver = selector({
     const outObserver = get(disjunctionObserver);
 
     if (inObserver && outObserver) {
-      return [inObserver, outObserver] as const;
+      return [inObserver, outObserver] as const; 
     }
-
+    
     return null;
   }
-})
+});

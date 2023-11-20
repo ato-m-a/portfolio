@@ -1,4 +1,4 @@
-export { default as AnimatedWrapper } from './animated-wrapper';
+export { default as AnimatedListitem } from './animated-listitem';
 export { default as Bullet } from './bullet';
 export * as DividedRow from './divided-row';
 export { default as Emoji } from './emoji';

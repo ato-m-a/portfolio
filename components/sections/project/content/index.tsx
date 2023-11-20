@@ -1,4 +1,4 @@
-import { AnimatedWrapper, Bullet, DividedRow } from '@/components/layout';
+import { AnimatedListitem, Bullet, DividedRow } from '@/components/layout';
 import type { Project } from '@/types/common/fixtures';
 import Link from 'next/link';
 import type { ReactElement } from 'react';
@@ -7,7 +7,7 @@ const Content = (project: Project): ReactElement => {
   const { at, name, participants, role, period, bullets, path } = project;
 
   return (
-    <AnimatedWrapper>
+    <AnimatedListitem>
       <DividedRow.responsiveWrapper>
         <DividedRow.titleColumn>
           {
@@ -33,7 +33,7 @@ const Content = (project: Project): ReactElement => {
           </ul>
         </DividedRow.contentColumn>
       </DividedRow.responsiveWrapper>
-    </AnimatedWrapper>
+    </AnimatedListitem>
   )
 }
 

@@ -17,7 +17,7 @@ export const useAnimation = (ref: RefObject<HTMLElement>, once: boolean = false)
       observers.forEach(observer => observer.observe(element));
 
       if (once) {
-        const timer = setTimeout(() => observers.forEach(observer => observer.unobserve(element)), duration);
+        const timer = setTimeout(() => observers.forEach(observer => observer.unobserve(element)), duration / 2);
         return () => clearTimeout(timer);
       }
 

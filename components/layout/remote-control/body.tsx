@@ -11,7 +11,7 @@ const Body = (): ReactElement => {
       const elementRect = element.getBoundingClientRect();
       const scrollTop = window.scrollY;
       window.scrollTo({
-        top: elementRect.top + scrollTop - 190,
+        top: elementRect.top + scrollTop - 200,
         behavior: 'smooth'
       });
     }

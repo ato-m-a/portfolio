@@ -11,21 +11,17 @@
       { 
         "outer": "Next.js 기반 사전청약 페이지 개발",
         "inner": [
-          "불필요한 요청을 줄이고, 캐시된 정보로 UI를 빠르게 그려내도록 React-Query를 함께 사용한 SSR 구현"
+          "SSR(React-Query) 기반의 Server-Driven UI 적용"
         ]
       },
       {
         "outer": "React 기반 운영 백오피스 개발(업로드, 입력, 테넌트 관리)",
         "inner": [
-          "자료 업로드, UI 및 관심고객등록 폼 설정값 입력 수행",
-          "AWS S3에 정적 빌드 산출물 배포 및 CloudFront(CDN) 사용해 서비스"
+          "자료 업로드, UI 및 관심고객등록 폼 설정값 입력 수행"
         ]
       },
       {
-        "outer": "Node.js 기반 REST API 개발(CRUD)",
-        "inner": [
-          "AWS Lambda, API Gateway(인터페이스)를 사용한 서버리스 아키텍처 적용"
-        ]
+        "outer": "Node.js 기반 REST API 개발(CRUD)"
       }
     ],
     "path": "/portfolio/사전청약-페이지-간편-구축-시스템"
@@ -43,8 +39,7 @@
         "outer": "Next.js 기반 CRM 대시보드 개발",
         "inner": [
           "SSR(React-Query) 기반으로 고객 데이터 렌더링 및 캐싱 전략 구성",
-          "독립된 모달의 상태관리 간소화 및 렌더링 최적화를 위해 Recoil 도입",
-          "AWS EC2 배포 및 PM2 프로세스 매니저를 사용한 무중단 배포 구축"
+          "독립된 모달의 상태관리 간소화 및 렌더링 최적화를 위해 Recoil 도입"
         ]
       },
       {
@@ -83,7 +78,6 @@
       {
         "outer": "IDC 인프라에서 Amazon AWS로 마이그레이션",
         "inner": [
-          "AWS S3, CloudFront로 정적 페이지 배포",
           "서버리스 아키텍처를 기반으로 고가용성 확보 및 유휴 자원의 비용 최적화"
         ]
       }
@@ -103,8 +97,7 @@
         "outer": "Jinja2 Template, JavaScript 기반의 프론트엔드 개발",
         "inner": [
           "가격 비교 페이지부터 점진적으로, 완전한 MPA에서 JavaScript Web API를 사용한 동적 렌더링으로 전환",
-          "jQuery 제거 및 이미지 포맷(WebP) 변경으로 성능 지표 개선 수행",
-          "d3.js, toast-ui 사용한 데이터 시각화 구현"
+          "jQuery 제거 및 이미지 포맷(WebP) 변경으로 성능 지표 개선 수행"
         ]
       },
       {

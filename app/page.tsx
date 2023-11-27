@@ -22,21 +22,20 @@ export default function Home() {
           <About.image />
           <About.content>
             <p className="mb-2">
-              Node.js, AWS 기반의 3년 차 웹 개발자로 소규모 조직에서 서비스의 개발 주기 전반에 걸쳐 주도적으로 업무를 진행해왔습니다. 창업 초기 단계의 스타트업에서 처음부터 구축에 참여하며
-              <TextHighlight>서비스의 초기 설계부터 개발, 운영</TextHighlight>까지 경험하며 회사의 기술 기반 마련에 기여한 경험이 있습니다.
+              TypeScript, React(Next.js) 기반의 3년 차 개발자로 소규모 조직에서 서비스의 개발 주기 전반에 걸쳐 주도적으로 업무를 진행해왔습니다.
+              창업 초기 스타트업에 첫 번째 개발자로 합류하여 PMS 제공사와 MOU 체결 및 비대면 서비스 바우처 공급기업 선정까지 <TextHighlight>회사의 기술 기반 마련</TextHighlight>에 힘 쓴 경험이 있습니다.
             </p>
             <p className="mb-2">
-              동료들의 <TextHighlight>업무 효율을 개선하는 일</TextHighlight>을 좋아합니다. 마케팅 에이전시에 재직하며 Server-Driven UI를 바탕으로 한
-              간편 구축 시스템 개발을 통해 웹 퍼블리셔와 디자이너의 주간 루틴 업무 시간을 평균 3.5시간 단축시켰으며, 기존 대비 50% 더 많은 사전청약 페이지를 제공할 수
-              있도록 기여한 경험이 있습니다.
+              동료들의 <TextHighlight>업무 효율을 개선하는 일</TextHighlight>을 좋아합니다. Server-Driven UI를 바탕으로 한 간편 구축 시스템
+              개발을 통해 웹 퍼블리셔와 디자이너의 주간 루틴 업무 시간을 평균 3.5시간 단축시키고, 기존 대비 150% 수준의 사전청약 페이지를 제공할 수 있도록 개선한 경험이 있습니다.
             </p>
             <p className="mb-2">
-              팀과 회사 차원의 임팩트에 집중하며 주도적으로 개발합니다. 개별 제작하던 웹 이벤트의 외주 개발 비용 및 인프라 운영, 관리의 일관성 확보를 위해 CRM 대시보드를 <TextHighlight>SaaS로 전환</TextHighlight>하여
-              건당 10만 원에서 15만 원 수준의 외주 비용 지출을 없애고 중앙 집중형 관리 체계를 마련한 경험이 있습니다.
+              무엇보다 <TextHighlight>비즈니스 임팩트</TextHighlight>에 집중합니다. 서비스 개선을 위해 고객사와의 미팅, 사용자 행동 데이터 및 전환율의 정량적 분석을 주도적으로 수행하였으며,
+              기획 및 현장 영업 부서 등 다양한 직무의 동료들과 능동적으로 커뮤니케이션하며 협업해왔습니다.
             </p>
             <p>
-              개인이 하고 싶은 프론트엔드 개발 보다는 <TextHighlight>회사 차원</TextHighlight>에서 도움이 되는 개발을 수행해야 한다는 생각으로 Node.js 기반의
-              풀스택 개발자로 일해왔습니다. 지난 2년간 개발을 해오며, 프론트엔드 영역이 고객을 처음 맞이하고 서비스의 첫인상을 책임진다는 부분에 매력을 느껴 더 깊이 관여하고자 합니다.
+              개인으로서 하고 싶은 프론트엔드 개발 보다는 <TextHighlight>회사 차원</TextHighlight>에서 도움이 되는 개발을 수행해야 한다는 생각으로 Node.js 기반의
+              풀스택 개발자로 일해왔습니다. 지난 2년간 개발을 해오며, 프론트엔드 영역이 사용자를 처음 맞이하고 서비스의 첫인상을 책임진다는 부분에 매력을 느껴 더 깊이 관여하고자 합니다.
             </p>
           </About.content>
         </About.wrapper>
@@ -98,7 +97,7 @@ export default function Home() {
         </Project.wrapper>
       </Section.wrapper>
       <Floating.wrapper className="font-thin p-2 bottom-2 left-2 max-md:text-sm">
-        <p>2023년 11월 19일 업데이트</p>
+        <p>2023년 11월 28일 업데이트</p>
       </Floating.wrapper>
       <ScrollSaver />
       <RemoteControl />

@@ -9,16 +9,17 @@
     "participants": 2,
     "bullets": [
       { 
-        "outer": "Next.js 기반 메인 클라이언트 사이드 개발",
+        "outer": "Next.js 기반 사전청약 페이지 개발",
         "inner": [
-          "SSR 기반으로 설정된 UI를 렌더링"
+          "불필요한 요청을 줄이고, 캐시된 정보로 UI를 빠르게 그려내도록 React-Query를 함께 사용한 SSR 구현",
+          "Vercel에 배포"
         ]
       },
       {
         "outer": "React 기반 운영 백오피스 개발(업로드, 입력, 테넌트 관리)",
         "inner": [
-          "aws-sdk를 사용한 S3 업로드 및 캐시 무효화 작업 수행",
-          "서브도메인으로 테넌트 구분, NestJS 기반 인증/인가 서버에서 테넌트별 권한 관리"
+          "자료 업로드, UI 및 관심고객등록 폼 설정값 입력 수행",
+          "AWS S3에 정적 빌드 산출물 배포 및 CloudFront(CDN) 사용해 서비스"
         ]
       },
       {
@@ -27,13 +28,20 @@
           "AWS Lambda, API Gateway(인터페이스)를 사용한 서버리스 아키텍처",
           "관심고객등록 입력 폼 및 UI 설정을 NoSQL(AWS DynamoDB)에 저장"
         ]
+      },
+      {
+        "outer": "간편 구축 시스템으로 업무 프로세스를 개선해 효율성 향상",
+        "inner": [
+          "웹 퍼블리셔 및 디자이너의 주간 루틴 업무 시간을 평균 3.5시간 절감",
+          "운영 인력이 빠르게 개설할 수 있도록 하여 기존 대비 150% 수준의 사전청약 페이지 제공을 가능하게 함"
+        ]
       }
     ],
     "path": "/portfolio/사전청약-페이지-간편-구축-시스템"
   },
   {
     "order": 2,
-    "name": "이벤트월드",
+    "name": "이벤트월드 B2B SaaS 전환",
     "at": "(주)하이브미디어",
     "period": "2022.06 ~ 2022.09 (3개월)",
     "description": "웹 이벤트 광고주 어드민 시스템의 B2B SaaS 전환 프로젝트",
@@ -45,18 +53,22 @@
         "inner": [
           "SSR(React-Query) 기반으로 고객 데이터 렌더링 및 캐싱 전략 구성",
           "Recharts 사용한 데이터 시각화(전환수, 방문수 등) 컴포넌트 제작",
-          "여러 단계의 독립된 모달의 상태 관리를 위해 Recoil 도입",
-          "PM2 프로세스 매니저를 사용한 무중단 배포 구축"
+          "독립된 모달의 상태관리 간소화 및 렌더링 최적화를 위해 Recoil 도입",
+          "AWS EC2 배포 및 PM2 프로세스 매니저를 사용한 무중단 배포 구축"
         ]
       },
       {
         "outer": "React 기반 운영 백오피스 개발 (테넌트 및 고객사 관리)",
         "inner": [
-          "이벤트 단위를 테넌트로 하여 서브도메인으로 구분, NestJS 기반 인증/인가 서버에서 테넌트별 권한 관리"
+          "이벤트 단위를 테넌트로 하여 서브도메인으로 구분, NestJS 기반 인증/인가 서버에서 테넌트별 권한 관리",
+          "고객사 및 권한 관리 기능 수행"
         ]
       },
       {
         "outer": "Node.js 기반 REST API 개발(CRUD)"
+      },
+      {
+        "outer": "SaaS 구축으로 외주 개발 의존도를 제거하고 비용 최적화 및 운영과 관리 측면의 일관성 확보"
       }
     ],
     "path": "/portfolio/이벤트월드-SaaS-전환"
@@ -71,7 +83,11 @@
     "participants": 2,
     "bullets": [
       { 
-        "outer": "PHP 뷰 페이지의 비즈니스 로직 분리 및 HTML, JavaScript 기반으로 전환" 
+        "outer": "PHP 뷰 페이지의 비즈니스 로직 분리 및 HTML, JavaScript 기반으로 전환",
+        "inner": [
+          "Node.js 함수 핸들러를 AWS Lambda에 배포, API Gateway 사용해 인터페이스 구성",
+          "클라이언트 사이드에서 데이터 책임을 분리해 유지보수성 향상 및 보안 개선"
+        ]
       },
       {
         "outer": "NestJS 기반 REST API 서버 개발(전사 시스템 인증/인가)",
@@ -83,7 +99,8 @@
         "outer": "IDC 인프라에서 Amazon AWS로 마이그레이션",
         "inner": [
           "AWS S3, CloudFront로 정적 페이지 배포",
-          "Github Actions를 사용한 CI/CD 구축"
+          "Github Actions를 사용한 CI/CD 구축으로 프로덕션 안정성 확보",
+          "서버리스 아키텍처를 기반으로 고가용성 확보 및 유휴 자원의 비용 최적화"
         ]
       }
     ],
@@ -99,7 +116,12 @@
     "participants": 4,
     "bullets": [
       {
-        "outer": "jQuery => JavaScript 리팩토링, 이미지 포맷(WebP) 변경"
+        "outer": "Jinja2 Template, JavaScript 기반의 프론트엔드 개발",
+        "inner": [
+          "가격 비교 페이지부터 점진적으로, 완전한 MPA에서 JavaScript Web API를 사용한 동적 렌더링으로 전환",
+          "jQuery 제거 및 이미지 포맷(WebP) 변경으로 성능 지표 개선 수행",
+          "d3.js, toast-ui 사용한 데이터 시각화 구현"
+        ]
       },
       {
         "outer": "월간 페이지의 가격 조회를 일 단위 비동기 요청과 동적 렌더링으로 변경하여 FCP를 10초에서 3초 수준으로 개선",
@@ -109,12 +131,12 @@
         ]
       },
       {
-        "outer": "d3.js, toast-ui를 사용한 주간/월간 가격 변동 추이 시각화"
+        "outer": "Flask 기반의 Python REST API 서버 개발"
       },
       {
         "outer": "7개 OTA의 데이터 스크래핑 자동화 시스템 구축",
         "inner": [
-          "AWS ECR, ECS(Fargate), Batch 기반으로 전환하여 일 평균 105$ 에서 18$ 수준으로 비용 절감"
+          "AWS ECR(Docker), ECS(Fargate), Batch 기반으로 전환하여 일 평균 105$ 에서 18$ 수준으로 비용 절감"
         ]
       }
     ],

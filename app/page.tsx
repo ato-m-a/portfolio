@@ -30,11 +30,11 @@ export default function Home() {
               개발을 통해 웹 퍼블리셔와 디자이너의 주간 루틴 업무 시간을 평균 3.5시간 단축시키고, 기존 대비 150% 수준의 사전청약 페이지를 제공할 수 있도록 개선한 경험이 있습니다.
             </p>
             <p className="mb-2">
-              무엇보다 <TextHighlight>비즈니스 임팩트</TextHighlight>에 집중합니다. 서비스 개선을 위해 고객사와의 미팅, 사용자 행동 데이터 및 전환율의 정량적 분석을 주도적으로 수행하였으며,
+              코드에 대한 애착보다 <TextHighlight>더 좋은 서비스에 집중</TextHighlight>합니다. 서비스 개선을 위해 고객사와의 미팅, 사용자 행동 데이터 및 전환율의 정량적 분석을 주도적으로 수행하였으며,
               기획 및 현장 영업 부서 등 다양한 직무의 동료들과 능동적으로 커뮤니케이션하며 협업해왔습니다.
             </p>
             <p>
-              개인으로서 하고 싶은 프론트엔드 개발 보다는 <TextHighlight>회사 차원</TextHighlight>에서 도움이 되는 개발을 수행해야 한다는 생각으로 Node.js 기반의
+              개인으로서 하고 싶은 프론트엔드 개발 보다는 <TextHighlight>비즈니스 임팩트</TextHighlight>에 우선한 개발을 수행해야 한다는 생각으로 Node.js 기반의
               풀스택 개발자로 일해왔습니다. 지난 2년간 개발을 해오며, 프론트엔드 영역이 사용자를 처음 맞이하고 서비스의 첫인상을 책임진다는 부분에 매력을 느껴 더 깊이 관여하고자 합니다.
             </p>
           </About.content>
@@ -97,7 +97,7 @@ export default function Home() {
         </Project.wrapper>
       </Section.wrapper>
       <Floating.wrapper className="font-thin p-2 bottom-2 left-2 max-md:text-sm">
-        <p>2023년 11월 28일 업데이트</p>
+        <p>2023년 12월 5일 업데이트</p>
       </Floating.wrapper>
       <ScrollSaver />
       <RemoteControl />

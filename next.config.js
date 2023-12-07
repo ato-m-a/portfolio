@@ -55,6 +55,14 @@ const nextConfig = {
         headers: securityHeaders
       }
     ]
+  },
+  async rewrites() {
+    return [
+      {
+        source: '/cv',
+        destination: '/홍준혁_경력기술서.pdf'
+      }
+    ]
   }
 }
 

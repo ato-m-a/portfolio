@@ -97,7 +97,7 @@ export default function Home() {
         </Project.wrapper>
       </Section.wrapper>
       <Floating.wrapper className="font-thin p-2 bottom-2 left-2 max-md:text-sm">
-        <p>2023년 12월 5일 업데이트</p>
+        <p>2023년 12월 29일 업데이트</p>
       </Floating.wrapper>
       <ScrollSaver />
       <RemoteControl />

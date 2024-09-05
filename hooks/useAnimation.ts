@@ -1,14 +1,14 @@
 import { duration } from '@/common/animation';
-import { selectObserver } from '@/store/observer';
+import { selectObserver } from '@/atoms/observer';
 import { useEffect, type RefObject } from 'react';
-import { useRecoilValue } from 'recoil';
+import { useAtomValue } from 'jotai';
 
 /**
  * @param ref observe 할 element
  * @param once 한 번만 observe 할지 여부
  */
 export const useAnimation = (ref: RefObject<HTMLElement>, once: boolean = false) => {
-  const observers = useRecoilValue(selectObserver);
+  const observers = useAtomValue(selectObserver);
 
   useEffect(() => {
     const element = ref.current;
@@ -23,5 +23,5 @@ export const useAnimation = (ref: RefObject<HTMLElement>, once: boolean = false)
 
       return () => observers.forEach(observer => observer.unobserve(element));
     }
-  }, []);
+  }, [ref, observers, once]);
 }

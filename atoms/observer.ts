@@ -1,9 +1,8 @@
 import { animateIn, animateOut } from '@/common/animation';
-import { atom, selector } from 'recoil';
+import { atom } from 'jotai';
 
-const intersectionObserver = atom({
-  key: 'intersectionObserver',
-  default: typeof window !== 'undefined' ? new IntersectionObserver((entries) => {
+const intersectionObserver = atom<IntersectionObserver | null>(
+  typeof window !== 'undefined' ? new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
       const element = entry.target;
 
@@ -12,11 +11,10 @@ const intersectionObserver = atom({
       }
     });
   }, { threshold: 0.2 }) : null
-});
+);
 
-const disjunctionObserver = atom({
-  key: 'disjunctionObserver',
-  default: typeof window !== 'undefined' ? new IntersectionObserver((entries) => {
+const disjunctionObserver = atom<IntersectionObserver | null>(
+  typeof window !== 'undefined' ? new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
       const element = entry.target;
 
@@ -25,18 +23,17 @@ const disjunctionObserver = atom({
       }
     });
   }, { threshold: 0.15 }) : null
-});
+);
 
-export const selectObserver = selector({
-  key: 'selectObserver',
-  get: ({ get }) => {
+export const selectObserver = atom<IntersectionObserver[] | null>((get) => {
+  if (typeof window !== 'undefined') {
     const inObserver = get(intersectionObserver);
     const outObserver = get(disjunctionObserver);
 
     if (inObserver && outObserver) {
-      return [inObserver, outObserver] as const; 
+      return [inObserver, outObserver] as const;
     }
-    
-    return null;
   }
+
+  return null;
 });

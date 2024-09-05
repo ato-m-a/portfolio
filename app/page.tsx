@@ -47,24 +47,12 @@ export default function Home() {
         <Section.header>
           <Section.title><Emoji.skill /> Skills</Section.title>
           <Section.subtitle>업무에 사용 중이거나, 사용 경험이 있는 기술들이에요 !</Section.subtitle>
-          <Section.subtitle className="pt-2">
-            <div className="flex max-md:flex-col justify-center max-md:items-center">
-              <div className="max-md:mb-2 max-md:w-full">
-                <span className="bg-blue-600 text-white px-2 py-1 text-sm rounded mr-2">Beginner - 1</span>
-                <span className="bg-green-600 text-white px-2 py-1 text-sm rounded mr-2">Intermediate - 2</span>
-              </div>
-              <div className="max-md:px-16 max-md:w-full">
-                <span className="bg-orange-600 text-white px-2 py-1 text-sm rounded mr-2">Advanced - 3</span>
-                <span className="bg-red-600 text-white px-2 py-1 text-sm rounded">Expert - 4</span>
-              </div>
-            </div>
-          </Section.subtitle>
         </Section.header>
         <Skills.wrapper>
           {
             skills.map((skill, index) => (
               <Skills.content key={`skill-${index}`} id={skill.id} bullets={skill.bullets}>
-                <Skills.title id={skill.id} level={skill.level} icon={skill.icon} />
+                <Skills.title id={skill.id} icon={skill.icon} />
               </Skills.content>
             ))
           }

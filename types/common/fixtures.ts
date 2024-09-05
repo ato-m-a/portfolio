@@ -12,11 +12,13 @@ export interface Career {
   bullets: Bullet[];
 }
 
+/** @deprecated */
 export type Level = 'Beginner' | 'Intermediate' | 'Advanced' | 'Expert';
 
 export interface Skill {
   id: string;
   icon: string;
+  /** @deprecated */
   level: Level;
   bullets: string[];
 }

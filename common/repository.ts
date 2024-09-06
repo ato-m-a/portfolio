@@ -4,7 +4,7 @@ import type { By, Repository } from '@/types/common/repository';
 type FixtureKey = keyof typeof fixtures;
 
 // Fixture
-export class FixtureRepository<T> implements Repository<T> {
+export default class FixtureRepository<T> implements Repository<T> {
   private readonly _data: T[];
 
   constructor(key: FixtureKey) {

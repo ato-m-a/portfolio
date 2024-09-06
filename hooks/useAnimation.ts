@@ -7,7 +7,7 @@ import { useAtomValue } from 'jotai';
  * @param ref observe 할 element
  * @param once 한 번만 observe 할지 여부
  */
-export const useAnimation = (ref: RefObject<HTMLElement>, once: boolean = false) => {
+const useAnimation = (ref: RefObject<HTMLElement>, once: boolean = false) => {
   const observers = useAtomValue(selectObserver);
 
   useEffect(() => {
@@ -25,3 +25,5 @@ export const useAnimation = (ref: RefObject<HTMLElement>, once: boolean = false)
     }
   }, [ref, observers, once]);
 }
+
+export default useAnimation;

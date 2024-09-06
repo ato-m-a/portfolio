@@ -1,6 +1,6 @@
-import { FixtureRepository } from '@/common/repository';
 import type { Project } from '@/types/common/fixtures';
 import type { MetadataRoute } from 'next';
+import FixtureRepository from '@/common/repository';
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const projects = FixtureRepository.get<Project>('project');

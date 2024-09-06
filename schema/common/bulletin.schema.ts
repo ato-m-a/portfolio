@@ -1,14 +1,15 @@
 import { z } from 'zod';
 
-export type BulletinFixtureSchema<Schema extends z.ZodObject<any>> = z.infer<ReturnType<typeof bulletinFixtureSchema<Schema>>>;
+export type BulletSchema = z.infer<typeof bulletSchema>;
+export type BulletinSchema = z.infer<typeof bulletinSchema>;
 
-const bulletinFixtureSchema = <Schema extends z.ZodObject<any>>(schema: Schema) => z.object({
-  bullets: z.array(
-    z.object({
-      outer: z.string(),
-      inner: z.array(z.string()).optional()
-    })
-  )
-}).extend(schema.shape);
+export const bulletSchema = z.object({
+  outer: z.string(),
+  inner: z.array(z.string()).optional()
+})
 
-export default bulletinFixtureSchema;
+const bulletinSchema = z.object({
+  bullets: z.array(bulletSchema)
+})
+
+export default bulletinSchema;

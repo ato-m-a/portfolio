@@ -1,4 +1,4 @@
-import { Comment, Figure } from '@/components/sections/not-found';
+import { Comment, Figure } from '@/components/articles/not-found';
 import localFont from 'next/font/local';
 import Image from 'next/image';
 import Link from 'next/link';

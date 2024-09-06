@@ -1,3 +1,4 @@
+import type { Tuples } from '@/types/common/tuples';
 import { animateIn, animateOut } from '@/common/animation';
 import { atom } from 'jotai';
 
@@ -25,7 +26,7 @@ const disjunctionObserver = atom<IntersectionObserver | null>(
   }, { threshold: 0.15 }) : null
 );
 
-export const selectObserver = atom<IntersectionObserver[] | null>((get) => {
+export const selectObserver = atom<Tuples<IntersectionObserver, 2> | null>((get) => {
   if (typeof window !== 'undefined') {
     const inObserver = get(intersectionObserver);
     const outObserver = get(disjunctionObserver);

@@ -1,6 +1,6 @@
 import type { NextPage } from 'next';
 import { ScrollSaver } from '@/components/common';
-import { Floating, Header, Article } from '@/components/layout';
+import { Header, Article } from '@/components/layout';
 import { About, Skill, Experience, Project } from '@/components/articles';
 import { Navigation } from '@/components/controls';
 import { Emoji } from '@/constants/emoji';
@@ -35,9 +35,10 @@ const MainPage: NextPage = () => {
           content={<Project />}
         />
       </main>
-      <Floating.wrapper className="font-thin p-2 bottom-2 left-2 max-md:text-sm">
+      {/** last updated */}
+      <div className="fixed font-thin p-2 bottom-2 left-2 max-md:text-sm">
         <p>2023년 12월 29일 업데이트</p>
-      </Floating.wrapper>
+      </div>
       <ScrollSaver />
       <Navigation />
     </>

@@ -1,13 +1,13 @@
-import { FixtureRepository } from '@/common/repository';
-import * as Notion from '@/components/sections/portfolio';
-import type { Portfolio } from '@/types/common/fixtures';
+import type { PortfolioFixtureSchema } from '@/schema/portfolio.schema';
+import type { NotionProps, Params } from './types';
+import * as Notion from '@/components/articles/portfolio';
 import { notFound } from 'next/navigation';
 import { NotionAPI } from 'notion-client';
-import type { NotionProps, Params } from './types';
+import FixtureRepository from '@/common/repository';
 
 async function fetchData(params: Params) {
   const name = decodeURI(params.name);
-  const repository = new FixtureRepository<Portfolio>('portfolio');
+  const repository = new FixtureRepository<PortfolioFixtureSchema>('portfolio');
   const portfolio = repository.getOne().by({ key: 'name', value: name }).execute();
 
   if (!portfolio) notFound();

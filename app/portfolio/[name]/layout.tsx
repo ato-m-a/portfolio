@@ -1,4 +1,4 @@
-import * as Notion from '@/components/sections/portfolio';
+import * as Notion from '@/components/articles/portfolio';
 import type { LayoutProps } from '@/types/components/layout';
 
 import 'katex/dist/katex.min.css';

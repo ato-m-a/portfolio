@@ -1,9 +1,9 @@
-import type { Project } from '@/types/common/fixtures';
+import type { ProjectFixtureSchema } from '@/schema/project.schema';
 import type { MetadataRoute } from 'next';
 import FixtureRepository from '@/common/repository';
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const projects = FixtureRepository.get<Project>('project');
+  const projects = FixtureRepository.get<ProjectFixtureSchema>('project');
   const filtered = projects.filter((project) => project.path);
 
   return [

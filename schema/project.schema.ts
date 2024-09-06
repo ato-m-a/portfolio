@@ -8,7 +8,6 @@ const projectFixtureSchema = z.object({
   name: z.string(),
   at: z.string(),
   period: z.string(),
-  description: z.string(),
   role: z.string(),
   participants: z.number(),
   path: z.string().nullable()

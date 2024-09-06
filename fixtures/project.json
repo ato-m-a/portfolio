@@ -1,120 +1,179 @@
 [
   {
     "order": 1,
-    "name": "사전청약 페이지 간편 구축 시스템",
-    "at": "(주)하이브미디어",
-    "period": "2022.10 ~ 2022.11 (1개월)",
-    "description": "Server-Driven UI로 간편하게 사전청약 페이지를 수정 혹은 개설하는 시스템",
+    "name": "Earlivery 문서 관리 서비스 리팩터링",
+    "at": "(주)트라이포드랩",
+    "period": "2024.01 ~ 현재 (진행중)",
     "role": "프론트엔드 개발",
     "participants": 2,
     "bullets": [
-      { 
-        "outer": "Next.js 기반 사전청약 페이지 개발",
+      {
+        "outer": "TanStack Query 기반 API 요청 관리 체계 개선",
         "inner": [
-          "SSR(React-Query) 기반의 Server-Driven UI 적용"
+          "요청 페이로드 관리, 사용자 권한 가드 로직의 캡슐화로 재사용성 강화",
+          "각 도메인 하위의 커스텀 훅으로 비동기 데이터 처리 흐름의 간소화",
+          "메타데이터와 갱신이 필요한 동적 데이터를 구분하여 캐싱 및 refetch 전략 구축"
         ]
       },
       {
-        "outer": "React 기반 운영 백오피스 개발(업로드, 입력, 테넌트 관리)",
+        "outer": "상태 관리 최적화로 비효율적인 재렌더링 최적화",
         "inner": [
-          "자료 업로드, UI 및 관심고객등록 폼 설정값 입력 수행"
+          "react-hook-form 기반 입력 필드 상태 관리 최적화",
+          "비즈니스 컴포넌트의 로컬 상태를 Context API로 공유해 깊은 props drilling 해소",
+          "Recoil 기반 전역 상태 관리 및 Render Props 패턴을 통한 상태 공유로 복잡한 UI 요구사항 해결"
         ]
       },
       {
-        "outer": "Node.js 기반 REST API 개발(CRUD)"
+        "outer": "컴파운드 컴포넌트 패턴으로 재구성해 비즈니스 로직을 캡슐화하고 재사용성을 강화"
+      },
+      {
+        "outer": "요청, 응답 인터페이스 관리 체계 리팩터링",
+        "inner": [
+          "Zod 스키마 기반으로 인터페이스 관리하도록 하여 타입 안정성 강화 및 react-hook-form과 함께 사용하여 효율적인 Form Validation을 수행"
+        ]
+      },
+      {
+        "outer": "마이페이지, 구독 및 결제 정보 Screen 개발 및 PG 위젯 연동 등 신규 기능 추가 개발"
       }
-    ],
-    "path": "/portfolio/사전청약-페이지-간편-구축-시스템"
+    ]
   },
   {
     "order": 2,
-    "name": "이벤트월드 B2B SaaS 전환",
-    "at": "(주)하이브미디어",
-    "period": "2022.06 ~ 2022.09 (3개월)",
-    "description": "웹 이벤트 광고주 어드민 시스템의 B2B SaaS 전환 프로젝트",
-    "role": "풀스택 개발",
-    "participants": 3,
+    "name": "Earlivery 스마트 저울 서비스 통합",
+    "at": "(주)트라이포드랩",
+    "period": "2024.06 ~ 2024.07 (2개월)",
+    "role": "프론트엔드 개발",
+    "participants": 2,
     "bullets": [
       {
-        "outer": "Next.js 기반 CRM 대시보드 개발",
+        "outer": "스마트 저울 디바이스 및 연동 제품 관리, 재고 관리 Screen 개발"
+      },
+      {
+        "outer": "통합 과정에서 사용자 경험 저해 최소화를 위한 디자인 리뉴얼 진행",
         "inner": [
-          "SSR(React-Query) 기반으로 고객 데이터 렌더링 및 캐싱 전략 구성",
-          "독립된 모달의 상태관리 간소화 및 렌더링 최적화를 위해 Recoil 도입"
+          "컬러 팔레트 등 디자인 시스템 일부 수정 및 GNB 컴포넌트 추가 구현",
+          "복잡도 증가로 인해 비즈니스 로직을 캡슐화한 Headless 컴포넌트 구현, UI와 분리하며 구현 일관성을 강화하기 위해 컴파운드 컴포넌트 패턴 적용"
         ]
       },
       {
-        "outer": "React 기반 운영 백오피스 개발 (테넌트 및 고객사 관리)",
-        "inner": [
-          "이벤트 단위를 테넌트로 하여 서브도메인으로 구분, NestJS 기반 인증/인가 서버에서 테넌트별 권한 관리"
-        ]
-      },
-      {
-        "outer": "Node.js 기반 REST API 개발(CRUD)"
+        "outer": "대형 제약바이오사 등에 서비스를 성공적으로 도입하고 PoC 진행에 기여"
       }
-    ],
-    "path": "/portfolio/이벤트월드-SaaS-전환"
+    ]
   },
   {
     "order": 3,
-    "name": "청약 시스템 리엔지니어링",
-    "at": "(주)하이브미디어",
-    "period": "2022.04 ~ 2022.05 (1개월)",
-    "description": "기존 비즈니스 레거시 청산 및 인프라 마이그레이션",
-    "role": "풀스택 개발",
+    "name": "Earlivery 서비스 베트남 현지화",
+    "at": "(주)트라이포드랩",
+    "period": "2024.04 ~ 2024.06 (3개월)",
+    "role": "프론트엔드 개발",
     "participants": 2,
     "bullets": [
-      { 
-        "outer": "PHP 뷰 페이지의 비즈니스 로직 분리 및 HTML, JavaScript 기반으로 전환",
+      {
+        "outer": "i18next 및 react-i18next 사용한 베트남 현지화 기능 개발",
         "inner": [
-          "Node.js 함수 핸들러를 AWS Lambda에 배포, API Gateway 사용해 인터페이스 구성"
+          "정적 빌드 산출물을 배포하는 CSR 환경의 서비스로, react-i18next 사용",
+          "추후 Next.js BFF 활용 및 SSR 통한 메타데이터 서버사이드 동기화와 함께 next-i18next 마이그레이션 계획",
+          "번역 스크립트 관리 체계 구축하여 향후 국제화 기반 마련"
         ]
       },
       {
-        "outer": "NestJS 기반 REST API 서버 개발(전사 시스템 인증/인가)",
-        "inner": [
-          "AWS EC2, ELB를 사용해 배포 및 응용 계층 라우팅 구성"
-        ]
-      },
-      {
-        "outer": "IDC 인프라에서 Amazon AWS로 마이그레이션",
-        "inner": [
-          "서버리스 아키텍처를 기반으로 고가용성 확보 및 유휴 자원의 비용 최적화"
-        ]
+        "outer": "베트남 현지 공장의 서비스 도입 및 한국 시장 진출에 기여"
       }
-    ],
-    "path": "/portfolio/청약-시스템-리엔지니어링"
+    ]
   },
   {
     "order": 4,
-    "name": "데이터메니티 RMS",
+    "name": "CRM 시스템 B2B SaaS 전환",
+    "at": "(주)하이브미디어",
+    "period": "2022.06 ~ 2022.08 (3개월)",
+    "role": "풀스택 개발",
+    "participants": 2,
+    "bullets": [
+      {
+        "outer": "잠재고객 및 마케팅 성과 관리 시스템의 B2B SaaS 전환",
+        "inner": [
+          "건별 15만 원 수준의 외주 의존을 제거, 서비스 공급 단가또한 낮추어 재직 기간 중 100건 이상의 서비스 제공",
+          "운영하며 마케팅 핵심 지표 시각화 기능, 상담 일지 관리 및 콜드 메일 발송 기능 추가 구현"
+        ]
+      },
+      {
+        "outer": "Next.js v12 기반 CRM 대시보드 및 어드민의 프론트엔드 개발",
+        "inner": [
+          "도메인별 React-Query 기반 커스텀 훅으로 캡슐화해 비동기 데이터 흐름 최적화",
+          "Recoil, Redux(Toolkit) 기반 전역 상태 관리",
+          "비공개 어드민 API 및 테넌트별 데이터 처리를 위한 Next.js API 기반 BFF 구성"
+        ]
+      },
+      {
+        "outer": "Amazon AWS 기반 멀티테넌시 아키텍처 구성",
+        "inner": [
+          "path 기반으로 동적 라우팅을 통해 테넌트별 화면 제공 및 데이터 처리 수행",
+          "Next.js v13 마이그레이션 이후 미들웨어와 동적 라우팅을 함께 사용해 와일드카드 서브도메인 라우팅 시나리오 구성",
+          "BFF 계층이 세션 정보와 테넌트 정보 검증, 맞춤형 서비스 및 데이터 제공",
+          "AWS Cognito 서비스를 사용하지 않고 테넌트별 비용 분리/추적을 위해 로그 수집 및 분석 시스템 구축"
+        ]
+      },
+      {
+        "outer": "NestJS 기반 CRM 시스템 및 공개 API의 백엔드 개발"
+      }
+    ],
+    "path": "/portfolio/CRM-시스템-B2B-SaaS-전환"
+  },
+  {
+    "order": 5,
+    "name": "사전청약 페이지 관리 CMS 개발",
+    "at": "(주)하이브미디어",
+    "period": "2022.11 ~ 2023.01 (3개월)",
+    "role": "프론트엔드 개발",
+    "participants": 2,
+    "bullets": [
+      {
+        "outer": "사전청약 페이지 신규 개설 및 관리를 위한 CMS 개발",
+        "inner": [
+          "웹 퍼블리셔 및 디자이너의 주간 루틴 업무 시간을 평균 3.5시간 절감, 기존 대비 150% 수준의 사전청약 페이지를 제공할 수 있도록 기여"
+        ]
+      },
+      { 
+        "outer": "Next.js 기반 사전청약 페이지 및 API 개발",
+        "inner": [
+          "Next.js 동적 라우팅 및 SSR 기반의 사전청약 페이지의 클라이언트 개발",
+          "Next.js API 기반 CMS의 CRUD 기능 개발 및 미들웨어와 함께 서브도메인 라우팅 시나리오 구성"
+        ]
+      },
+      {
+        "outer": "React.js 기반 CMS 개발",
+        "inner": [
+          "React-Query 기반 서버 사이드 동기화 및 API 요청 관리",
+          "AWS S3, CloudFront 기반 정적 애셋 관리 및 CMS 배포 시스템 구축"
+        ]
+      }
+    ],
+    "path": "/portfolio/사전청약-페이지-관리-CMS-개발"
+  },
+  {
+    "order": 6,
+    "name": "데이터메니티 RMS v1 개발",
     "at": "(주)히어로웍스",
-    "period": "2021.05 ~ 2021.09 (4개월)",
-    "description": "주변/설정 호텔과 가격을 비교할 수 있는 다양한 시각화 기능을 제공하는 RMS(수익 관리 시스템)",
+    "period": "2021.05 ~ 2021.10 (6개월)",
     "role": "풀스택 개발",
     "participants": 4,
     "bullets": [
       {
-        "outer": "Jinja2 Template, JavaScript 기반의 프론트엔드 개발",
+        "outer": "데이터메니티 RMS 서비스의 클라이언트 사이드(UI) 개발",
         "inner": [
-          "가격 비교 페이지부터 점진적으로, 완전한 MPA에서 JavaScript Web API를 사용한 동적 렌더링으로 전환",
-          "jQuery 제거 및 이미지 포맷(WebP) 변경으로 성능 지표 개선 수행"
+          "Python(Flask) MPA 기반에 템플릿 엔진(Jinja2)을 사용해 구현",
+          "Bootstrap 컴포넌트 기반으로 UI 디자인 수행 및 기획에 주도적으로 참여",
+          "jQuery 이벤트 핸들러와 Ajax 사용해 비동기적으로 API 요청을 수행하고 동적 렌더링하도록 점진적으로 개선하여 FCP를 10초에서 3초 수준으로 개선"
         ]
       },
       {
-        "outer": "월간 페이지의 가격 조회를 일 단위 비동기 요청과 동적 렌더링으로 변경하여 FCP를 10초에서 3초 수준으로 개선",
+        "outer": "Python(Flask) 기반 백엔드 개발",
         "inner": [
-          "사용자 경험 저해를 최소화하기 위해 Fallback UI 표시",
-          "일 단위 조회 시 요청 오버헤드로 인해 조회 로직을 AWS Lambda로 분리"
+          "Flask, MongoDB, PostgreSQL 기반으로 MPA 개발, 이후 Flask-RESTful 기반의 API 서버로 계층 분리"
         ]
       },
       {
-        "outer": "Flask 기반의 Python REST API 서버 개발"
-      },
-      {
-        "outer": "7개 OTA의 데이터 스크래핑 자동화 시스템 구축",
-        "inner": [
-          "AWS ECR(Docker), ECS(Fargate), Batch 기반으로 전환하여 일 평균 105$ 에서 18$ 수준으로 비용 절감"
-        ]
+        "outer": "OTA(Online Travel Agency) 데이터 스크래핑 자동화 시스템 구축"
       }
     ],
     "path": "/portfolio/데이터메니티-RMS"

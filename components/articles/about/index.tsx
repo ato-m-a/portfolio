@@ -16,8 +16,8 @@ const About: FC = () => {
       <article className="flex flex-col gap-2 text-lg w-3/5 max-md:w-full font-extralight leading-9 max-md:mx-auto break-all">
         <p>
           TypeScript, React(Next.js) 기반의 4년 차 개발자로 소규모 조직에서 B2B 웹 서비스를 개발/배포/운영하였습니다.
-          주로 웹 프론트엔드를 담당했으며 필요에 따라 AWS 클라우드 엔지니어링을 겸하였습니다.
-          창업 초기 스타트업에 첫 번째 개발자로 합류하여 비대면 서비스 바우처 공급기업 선정 및 50곳 이상의 고객사 확보까지 <TextHighlight>회사의 기술 기반 마련</TextHighlight>에 기여한 경험이 있습니다.
+          주로 프론트엔드 개발을 담당했으며 필요에 따라 AWS 클라우드 엔지니어링을 겸하였습니다.
+          창업 초기 스타트업에 첫 번째 개발자로 합류하여 비대면 서비스 바우처 공급기업 선정 및 50곳 이상의 고객사 확보까지 <TextHighlight>회사의 기술 기반 마련에 기여</TextHighlight>한 경험이 있습니다.
         </p>
         <p>
           고객의 문제를 함께 고민하고 해결함으로써 서비스의 가치를 높이는 데에서 보람을 느낍니다. 

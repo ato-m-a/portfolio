@@ -3,6 +3,10 @@
 import { usePathname } from 'next/navigation';
 import { useEffect, type ReactElement } from 'react';
 
+/**
+ * @description 스크롤 위치를 기억하고 돌려주는 컴포넌트
+ * @todo 서버 컴포넌트에서 훅 사용이 불가해서 만들었는데 더 좋은 방법 있을지 찾아보자
+ */
 const ScrollSaver = (): ReactElement => {
   const pathname = usePathname();
 

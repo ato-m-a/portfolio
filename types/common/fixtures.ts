@@ -20,7 +20,7 @@ export interface Skill {
   icon: string;
   /** @deprecated */
   level: Level;
-  bullets: string[];
+  contents: string[];
 }
 
 export interface Project {

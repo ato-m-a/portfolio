@@ -3,7 +3,7 @@
     "id": "JavaScript",
     "icon": "/images/javascript.webp",
     "level": "Advanced",
-    "bullets": [
+    "contents": [
       "Map, Set과 같은 자료 구조를 이해하고 적절히 활용합니다.",
       "JavaScript의 이벤트 루프와 비동기 프로그래밍에 대해 이해합니다.",
       "호이스팅, 변수 선언 및 스코프 규칙에 대해 이해합니다.",
@@ -15,7 +15,7 @@
     "id": "TypeScript",
     "icon": "/images/typescript.webp",
     "level": "Advanced",
-    "bullets": [
+    "contents": [
       "Generic, Mapped Type 등 고급 타입과 유틸리티 타입을 통한 타입 추론을 활용합니다.",
       "any 사용을 지양하고 unknown과 타입 가드를 적절히 활용해 타입 안전성을 보장합니다.",
       "프론트엔드, 백엔드 프레임워크와 함께 TypeScript를 효과적으로 통합하고 활용합니다.",
@@ -26,7 +26,7 @@
     "id": "Next.js",
     "icon": "/images/nextjs.webp",
     "level": "Advanced",
-    "bullets": [
+    "contents": [
       "다양한 렌더링 전략(SSR, ISR, SSG, SPA)에 대한 이해를 갖추고, 적절한 상황에 적용합니다.",
       "클라이언트 측과 서버 측의 Hydration 문제에 대한 이해를 바탕으로 한 트러블슈팅 경험이 있습니다.",
       "Next.js의 라우팅 시스템을 이해하고, 적절히 활용합니다."
@@ -36,7 +36,7 @@
     "id": "React",
     "icon": "/images/react.webp",
     "level": "Intermediate",
-    "bullets": [
+    "contents": [
       "React v16^의 hook을 효과적으로 활용하며, 커스텀 hook을 사용해 공통 로직을 재사용합니다.",
       "깊은 Props Drilling과 불필요한 리렌더링을 방지하도록 적절한 상태 관리 도구를 선택하고, 활용합니다.",
       "컴포넌트를 효과적으로 분리하고, 재사용하도록 추상화합니다."
@@ -46,7 +46,7 @@
     "id": "상태관리",
     "icon": "⚙️",
     "level": "Intermediate",
-    "bullets": [
+    "contents": [
       "상태 관리 도구(Recoil)와 Context API를 적절히 활용합니다.",
       "React-Query를 활용해 비동기 상태 관리 및 서버와의 동기화를 수행할 수 있습니다.",
       "기본적인 성능 최적화 기법을 이해하고, 적용합니다."
@@ -56,7 +56,7 @@
     "id": "NestJS",
     "icon": "/images/nestjs.webp",
     "level": "Intermediate",
-    "bullets": [
+    "contents": [
       "핵심 개념인 모듈화와 캡슐화, 그리고 싱글턴 패턴에 대한 기초적인 이해도를 갖추고 있습니다.",
       "HTTP 어댑터에 대한 기초적인 이해를 바탕으로 FaaS 서비스에서의 트러블슈팅 경험이 있습니다.",
       "의존성 주입에 대한 이해를 바탕으로 객체의 인스턴스를 효율적으로 사용합니다.",
@@ -67,7 +67,7 @@
     "id": "Amazon_AWS",
     "icon": "/images/aws.webp",
     "level": "Intermediate",
-    "bullets": [
+    "contents": [
       "EC2, ELB 서비스를 사용해 가상 머신에 배포하고, 응용 계층 라우팅을 구성할 수 있습니다.",
       "S3 서비스를 사용해 정적 파일을 관리하고, CloudFront를 사용한 CDN 서비스를 구성할 수 있습니다.",
       "ECR 서비스에 Docker 이미지를 배포하고, ECS(Fargate), Batch 서비스를 사용해 배치 시스템을 구축할 수 있습니다.",

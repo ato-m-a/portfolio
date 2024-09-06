@@ -1,5 +1,4 @@
-import type { Skill } from '@/types/common/fixtures';
+import type { SkillFixtureSchema } from '@/schema/skill.schema';
 
-export type TitleProps = Omit<Skill, 'bullets' | 'level'>;
-
-export type IconProps = Pick<Skill, 'icon'>;
+export type TitleProps = Omit<SkillFixtureSchema, 'contents' | 'level'>;
+export type IconProps = Pick<SkillFixtureSchema, 'icon'>;

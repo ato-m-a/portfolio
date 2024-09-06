@@ -51,7 +51,7 @@ export default function Home() {
         <Skills.wrapper>
           {
             skills.map((skill, index) => (
-              <Skills.content key={`skill-${index}`} id={skill.id} bullets={skill.bullets}>
+              <Skills.content key={`skill-${index}`} id={skill.id} contents={skill.contents}>
                 <Skills.title id={skill.id} icon={skill.icon} />
               </Skills.content>
             ))

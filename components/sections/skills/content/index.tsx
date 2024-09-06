@@ -7,7 +7,7 @@ import useAccordion from '@/hooks/useAccordion';
 import Arrow from './arrow';
 import Body from './body';
 
-const Content: ReactFC<ContentProps> = ({ children, id, bullets }) => {
+const Content: ReactFC<ContentProps> = ({ children, id, contents }) => {
   const accordionKey = useMemo(() => Symbol(id), []);
   const { isActive, toggle } = useAccordion(accordionKey);
 
@@ -20,9 +20,9 @@ const Content: ReactFC<ContentProps> = ({ children, id, bullets }) => {
       <Body $activate={isActive} className="border-x border-gray-400 shadow font-extralight">
         <ul className="list-disc pl-10">
           {
-            bullets.map((bullet, index) => (
+            contents.map((content, index) => (
               <li key={`content-li-${index}`} className="my-2">
-                {bullet}
+                {content}
               </li>
             ))
           }

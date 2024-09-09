@@ -1,16 +1,20 @@
 import { z } from 'zod';
-import bulletinSchema from './common/bulletin.schema';
+import careerSchema from './career.schema';
+import portfolioSchema from './portfolio.schema';
+import linkedListSchema from './common/linkedList.schema';
 
-export type ProjectFixtureSchema = z.infer<typeof projectFixtureSchema>;
+export type ProjectSchema = z.infer<typeof projectSchema>;
 
-const projectFixtureSchema = z.object({
-  order: z.number(),
+const projectSchema = z.object({
+  id: z.number(),
+  priority: z.number(),
   name: z.string(),
-  at: z.string(),
   period: z.string(),
   role: z.string(),
   participants: z.number(),
-  path: z.string().nullable()
-}).extend(bulletinSchema.shape);
+  detail: linkedListSchema,
+  career: careerSchema,
+  portfolio: portfolioSchema.optional()
+});
 
-export default projectFixtureSchema;
+export default projectSchema;

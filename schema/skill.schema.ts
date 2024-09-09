@@ -1,11 +1,13 @@
 import { z } from 'zod';
 
-export type SkillFixtureSchema = z.infer<typeof skillFixtureSchema>;
+export type SkillSchema = z.infer<typeof skillSchema>;
 
-const skillFixtureSchema = z.object({
-  id: z.string(),
+const skillSchema = z.object({
+  id: z.number(),
+  name: z.string(),
   icon: z.string(),
-  contents: z.array(z.string())
+  contents: z.array(z.string()),
+  orderIndex: z.number()
 });
 
-export default skillFixtureSchema;
+export default skillSchema;

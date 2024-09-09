@@ -43,7 +43,7 @@ const securityHeaders = [
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  webpack: (config, { webpack }) => {
+  webpack: (config) => {
     config.resolve.alias['@'] = path.resolve(__dirname, '.');
 
     return config;
@@ -53,14 +53,6 @@ const nextConfig = {
       {
         source: '/(.*)',
         headers: securityHeaders
-      }
-    ]
-  },
-  async rewrites() {
-    return [
-      {
-        source: '/cv',
-        destination: '/홍준혁_경력기술서.pdf'
       }
     ]
   }

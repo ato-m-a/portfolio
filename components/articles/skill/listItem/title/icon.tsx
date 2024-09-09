@@ -1,8 +1,8 @@
 import type { FC } from 'react';
-import type { SkillFixtureSchema } from '@/schema/skill.schema';
+import type { SkillSchema } from '@/schema/skill.schema';
 import Image from 'next/image';
 
-type IconProps = Pick<SkillFixtureSchema, 'icon'>;
+type IconProps = Pick<SkillSchema, 'icon'>;
 
 const SkillIcon: FC<IconProps> = ({ icon }) => {
   const isAssetPathRegexp = new RegExp(/^\/images\/.*\.webp$/);

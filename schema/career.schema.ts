@@ -1,14 +1,16 @@
 import { z } from 'zod';
-import bulletinSchema from './common/bulletin.schema';
+import linkedListSchema from './common/linkedList.schema';
 
-export type CareerFixtureSchema = z.infer<typeof careerFixtureSchema>;
+export type CareerSchema = z.infer<typeof careerSchema>;
 
-const careerFixtureSchema = z.object({
-  company: z.string(),
-  url: z.string(),
+const careerSchema = z.object({
+  id: z.number(),
+  companyName: z.string(),
   position: z.string(),
   period: z.string(),
-  description: z.string()
-}).extend(bulletinSchema.shape);
+  description: z.string(),
+  detail: linkedListSchema,
+  companyUrl: z.string().nullable()
+});
 
-export default careerFixtureSchema;
+export default careerSchema;

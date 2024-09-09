@@ -1,0 +1,64 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url = env("DATABASE_PRISMA_URL")
+  directUrl = env("DATABASE_URL_NON_POOLING")
+}
+
+model Skill {
+  id         Int      @id @default(autoincrement())
+  orderIndex Int      @map("order_index") @db.Integer
+  name       String   @db.Text
+  icon       String   @db.Text
+  contents   String[]
+
+  @@map("skill")
+}
+
+model Career {
+  id          Int       @id @default(autoincrement())
+  companyName String    @map("company_name") @db.Text
+  companyUrl  String?   @map("company_url") @db.Text
+  position    String    @db.Text
+  startDate   DateTime  @map("start_date") @db.Date
+  endDate     DateTime? @map("end_date") @db.Date
+  description String    @db.Text
+  detail      Json      @db.Json
+
+  project     Project[]
+
+  @@map("career")
+}
+
+model Project {
+  id           Int        @id @default(autoincrement())
+  priority     Int        @db.Integer
+  name         String     @db.Text
+  startDate    DateTime   @map("start_date") @db.Date
+  endDate      DateTime?  @map("end_date") @db.Date
+  role         String     @db.Text
+  participants Int        @db.Integer
+  detail       Json       @db.Json
+
+  career       Career     @relation(fields: [careerId], references: [id], map: "FK_project_career_id")
+  careerId     Int        @map("career_id")
+
+  portfolio    Portfolio? @relation(fields: [pathname], references: [pathname], map: "FK_portfolio_pathname")
+  pathname     String?    @map("pathname")
+
+  @@map("project")
+}
+
+model Portfolio {
+  pathname   String    @id @db.Text
+  pageId     String    @map("page_id") @db.Text
+  coverImage String    @map("cover_image") @db.Text
+  title      String    @db.Text
+
+  project    Project[]
+
+  @@map("portfolio")
+}

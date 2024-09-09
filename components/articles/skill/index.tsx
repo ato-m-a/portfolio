@@ -1,14 +1,15 @@
+"use client";
+
 import type { FC } from 'react';
-import type { SkillFixtureSchema } from '@/schema/skill.schema';
-import FixtureRepository from '@/common/repository';
+import { useSkills } from '@/hooks/query';
 import ListItem from './listItem'
 
 const Skill: FC = () => {
-  const skillFixture = FixtureRepository.get<SkillFixtureSchema>('skills');
+  const { data } = useSkills();
 
   return (
     <ul className="w-full">
-      {skillFixture.map((data) => (
+      {data && data.map((data) => (
         <ListItem key={data.id} {...data} />
       ))}
     </ul>

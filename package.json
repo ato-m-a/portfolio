@@ -9,8 +9,14 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@prisma/client": "^5.19.1",
+    "@tanstack/react-query": "^5.55.0",
+    "@tanstack/react-query-devtools": "^5.55.0",
+    "@toss/date": "^1.2.0",
+    "@vercel/postgres": "^0.10.0",
     "jotai": "^2.9.3",
     "katex": "^0.16.9",
+    "ky": "^1.7.2",
     "next": "14.0.3",
     "notion-client": "^6.16.0",
     "prismjs": "^1.29.0",
@@ -28,6 +34,7 @@
     "eslint": "^8",
     "eslint-config-next": "14.0.3",
     "postcss": "^8",
+    "prisma": "^5.19.1",
     "tailwindcss": "^3.3.0",
     "typescript": "^5"
   }

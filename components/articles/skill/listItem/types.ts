@@ -1,3 +1,3 @@
-import type { SkillFixtureSchema } from '@/schema/skill.schema';
+import type { SkillSchema } from '@/schema/skill.schema';
 
-export type ContentProps = Pick<SkillFixtureSchema, 'id' | 'contents'>;
+export type ContentProps = Pick<SkillSchema, 'id' | 'contents'>;

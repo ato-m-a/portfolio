@@ -1,10 +1,8 @@
-import type { ProjectFixtureSchema } from '@/schema/project.schema';
 import type { MetadataRoute } from 'next';
-import FixtureRepository from '@/common/repository';
+import portfolioRepository from '@/repository/portfolio.repository';
 
-export default function sitemap(): MetadataRoute.Sitemap {
-  const projects = FixtureRepository.get<ProjectFixtureSchema>('project');
-  const filtered = projects.filter((project) => project.path);
+export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
+  const paths = await portfolioRepository.getMany();
 
   return [
     {
@@ -12,8 +10,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: new Date(),
       priority: 1
     },
-    ...filtered.map((project) => ({
-      url: `https://ato-m-a.me${project.path}`,
+    ...paths.map(({ pathname }) => ({
+      url: `https://ato-m-a.me/portfolio/${pathname}`,
       lastModified: new Date(),
       priority: 0.8
     }))

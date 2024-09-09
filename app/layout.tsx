@@ -1,6 +1,7 @@
-import { AtomProvider, ScrollRestorer } from '@/components/common';
 import type { LayoutProps } from '@/types/components/layout';
 import type { Metadata } from 'next';
+import { ScrollRestorer } from '@/components/common';
+import { AtomProvider, QueryProvider } from '@/components/providers';
 import localFont from 'next/font/local';
 import Script from 'next/script';
 
@@ -67,9 +68,11 @@ export default function RootLayout({ children }: LayoutProps) {
       </head>
       <body className={`bg-gray-100 ${pretendard.className}`}>
         <AtomProvider>
-          {children}
-          <ScrollRestorer />
+          <QueryProvider>
+            {children}
+          </QueryProvider>
         </AtomProvider>
+        <ScrollRestorer />
       </body>
     </html>
   )

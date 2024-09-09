@@ -1,17 +1,15 @@
+"use client";
+
 import type { FC } from 'react';
-import type { ProjectFixtureSchema } from '@/schema/project.schema';
-import FixtureRepository from '@/common/repository';
+import { useProjects } from '@/hooks/query';
 import ProjectContent from './content';
 
-export { default as content } from './content';
-export { default as wrapper } from './wrapper';
-
 const Project: FC = () => {
-  const projectFixture = FixtureRepository.get<ProjectFixtureSchema>('project');
+  const { data } = useProjects();
 
   return (
     <ul className="flex flex-col">
-      {projectFixture.map((project) => <ProjectContent key={project.name} {...project} />)}
+      {data && data.map((project) => <ProjectContent key={project.name} {...project} />)}
     </ul>
   )
 }

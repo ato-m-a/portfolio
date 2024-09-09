@@ -1,5 +1,5 @@
 export interface Params {
-  name: string;
+  pathname: string;
 }
 
 export interface NotionProps {

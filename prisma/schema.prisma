@@ -14,6 +14,7 @@ model Skill {
   name       String   @db.Text
   icon       String   @db.Text
   contents   String[]
+  updatedAt  DateTime @map("updated_at") @updatedAt @default(now())
 
   @@map("skill")
 }
@@ -27,6 +28,7 @@ model Career {
   endDate     DateTime? @map("end_date") @db.Date
   description String    @db.Text
   detail      Json      @db.Json
+  updatedAt   DateTime  @map("updated_at") @updatedAt @default(now())
 
   project     Project[]
 
@@ -42,6 +44,7 @@ model Project {
   role         String     @db.Text
   participants Int        @db.Integer
   detail       Json       @db.Json
+  updatedAt    DateTime   @map("updated_at") @updatedAt @default(now())
 
   career       Career     @relation(fields: [careerId], references: [id], map: "FK_project_career_id")
   careerId     Int        @map("career_id")
@@ -57,6 +60,7 @@ model Portfolio {
   pageId     String    @map("page_id") @db.Text
   coverImage String    @map("cover_image") @db.Text
   title      String    @db.Text
+  updatedAt  DateTime  @map("updated_at") @updatedAt @default(now())
 
   project    Project[]
 

@@ -8,6 +8,9 @@ import { Emoji } from '@/constants/emoji';
 import queryOptions from '@/hooks/query/options';
 import getDehydratedQuery from '@/common/getDehydrated';
 
+/**
+ * @todo CMS 등 만든 후 version metadata와 함께 ISR 방식으로 전환
+ */
 const MainPage: NextPage = async () => {
   const dehydrated = await getDehydratedQuery([
     queryOptions.getSkills(),

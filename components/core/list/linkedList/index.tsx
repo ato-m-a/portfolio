@@ -8,7 +8,7 @@ const LinkedList: FC<LinkedListProps> = ({ item, depth = 0, isIndentItem }) => {
       {
         item.indent && (
           <li className="mb-2">
-            <ul className={`pl-${(depth + 1) * 5} list-indent`}>
+            <ul className={`pl-${(depth + 1) * 4}`}>
               <LinkedList item={item.indent} depth={depth + 1} isIndentItem />
             </ul>
           </li>

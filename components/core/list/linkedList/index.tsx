@@ -1,15 +1,15 @@
 import type { FC } from 'react';
 import type { LinkedListProps } from './types';
 
-const LinkedList: FC<LinkedListProps> = ({ item, depth = 0, isIndentItem }) => {
+const LinkedList: FC<LinkedListProps> = ({ item, depth = 0 }) => {
   return (
     <>
-      <li className={`mb-2 ${depth > 0 ? 'list-indent' : 'list-disc'} ${isIndentItem ? 'my-2' : ''}`}>{item.content}</li>
+      <li className={`mb-2 ${depth > 0 ? 'list-indent' : 'list-disc'}`}>{item.content}</li>
       {
         item.indent && (
-          <li className="mb-2">
+          <li>
             <ul className={`pl-${(depth + 1) * 4}`}>
-              <LinkedList item={item.indent} depth={depth + 1} isIndentItem />
+              <LinkedList item={item.indent} depth={depth + 1} />
             </ul>
           </li>
         )

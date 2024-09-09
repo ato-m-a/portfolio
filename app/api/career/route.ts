@@ -2,7 +2,7 @@ import { NextResponse } from 'next/server';
 import { periodSerializer } from '@/common/serializer';
 import prisma from '@/common/prisma';
 
-export const dynamic = "force-dynamic";
+export const dynamic = 'force-dynamic';
 
 export const GET = async () => {
   const careers = await prisma.career

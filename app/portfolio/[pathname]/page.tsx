@@ -15,6 +15,7 @@ async function fetchData(params: Params) {
 
   return { portfolio, recordMap };
 }
+
 const PortfolioPage: NextPage<NotionProps> = async ({ params }) => {
   const { portfolio, recordMap } = await fetchData(params);
   

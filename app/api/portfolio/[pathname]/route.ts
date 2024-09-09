@@ -5,16 +5,14 @@ interface Params {
   pathname: string;
 }
 
-export async function GET(
+export const GET = async (
   request: Request,
   { params }: { params: Params }
-) {
+) => {
   const { pathname } = params;
-  
+    
   const portfolio = await prisma.portfolio.findFirst({
-    where: {
-      pathname
-    }
+    where: { pathname }
   });
 
   return NextResponse.json(portfolio);

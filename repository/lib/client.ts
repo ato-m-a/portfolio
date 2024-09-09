@@ -22,8 +22,7 @@ export default abstract class HttpClient {
   private createInstance(): KyInstance {
     return ky.extend({
       prefixUrl: `${process.env.NEXT_PUBLIC_BASE_URL}/api/`,
-      headers: { 'Accept': 'application/json' },
-      cache: 'no-store'
+      headers: { 'Accept': 'application/json' }
     });
   }
 }

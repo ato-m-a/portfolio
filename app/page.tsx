@@ -48,7 +48,7 @@ const MainPage: NextPage = async () => {
       </main>
       {/** last updated */}
       <div className="fixed font-thin p-2 bottom-2 left-2 max-md:text-sm">
-        <p>2023년 12월 29일 업데이트</p>
+        <p>2024년 9월 9일 업데이트</p>
       </div>
       <ScrollSaver />
       <Navigation />

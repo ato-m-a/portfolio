@@ -1,8 +1,8 @@
 import type { MetadataRoute } from 'next';
-import portfolioRepository from '@/repository/portfolio.repository';
+import prisma from '@/common/prisma';
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
-  const paths = await portfolioRepository.getMany();
+  const paths = await prisma.portfolio.findMany();
 
   return [
     {

@@ -2,6 +2,8 @@ export interface Params {
   pathname: string;
 }
 
-export interface NotionProps {
-  params: Params;
+export interface PortfolioProps {
+  params: {
+    pathname: string;
+  };
 }

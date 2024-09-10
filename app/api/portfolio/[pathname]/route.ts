@@ -1,3 +1,4 @@
+import type { PortfolioProps } from '@/app/portfolio/[pathname]/types';
 import { NextResponse } from 'next/server';
 import prisma from '@/common/prisma';
 
@@ -7,10 +8,8 @@ interface Params {
 
 export const GET = async (
   request: Request,
-  { params }: { params: Params }
+  { params: { pathname } }: PortfolioProps
 ) => {
-  const { pathname } = params;
-    
   const portfolio = await prisma.portfolio.findFirst({
     where: { pathname }
   });

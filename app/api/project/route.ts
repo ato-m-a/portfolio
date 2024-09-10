@@ -40,7 +40,7 @@ export const GET = async () => {
     career: { company }, 
     ...project 
   }) => ({
-    ...project,
+    ...periodSerializer(project, '진행중'),
     companyName: company?.name
   }));
 

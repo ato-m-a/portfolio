@@ -17,7 +17,8 @@ export const GET = async () => {
     prisma.project.findFirst(queryOptions),
     prisma.portfolio.findFirst(queryOptions),
     prisma.career.findFirst(queryOptions),
-    prisma.skill.findFirst(queryOptions)
+    prisma.skill.findFirst(queryOptions),
+    prisma.company.findFirst(queryOptions)
   ]);
 
   const updatedAtList = queriedData.flatMap((item) => item?.updatedAt ?? []);

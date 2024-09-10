@@ -4,9 +4,7 @@ import { AnimatedListItem, ResponsiveArticle } from '@/components/core';
 import { List } from '@/components/core';
 
 const ExperienceContent: FC<CareerSchema> = ({
-  id,
-  companyName,
-  companyUrl,
+  company: { name: companyName, url: companyUrl },
   position,
   period,
   description,
@@ -18,7 +16,7 @@ const ExperienceContent: FC<CareerSchema> = ({
         <ResponsiveArticle.title>
           <h3 className="text-4xl my-2">{companyName}</h3>
           {companyUrl && (
-            <a href={companyUrl} target="_blank" rel="noreferer noopener" className="hv-underline text-xl block italic font-thin">
+            <a href={companyUrl} target="_blank" rel="noreferer noopener" className="hv-underline text-xl block italic font-thin w-fit">
               {companyUrl}
             </a>
           )}

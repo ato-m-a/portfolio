@@ -40,8 +40,8 @@ model Career {
   detail      Json      @db.Json
   updatedAt   DateTime  @map("updated_at") @updatedAt @default(now())
 
-  company     Company?  @relation(fields: [companyId], references: [id], map: "FK_career_company_id")
-  companyId   Int?      @map("company_id")
+  company     Company   @relation(fields: [companyId], references: [id], map: "FK_career_company_id")
+  companyId   Int       @map("company_id")
 
   project     Project[]
 

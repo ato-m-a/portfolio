@@ -17,7 +17,10 @@ export const GET = async () => {
         {
           startDate: 'desc'
         }
-      ]
+      ],
+      include: {
+        company: true
+      }
     });
 
   const serialized = careers.map((career) => periodSerializer(career, '재직중'));

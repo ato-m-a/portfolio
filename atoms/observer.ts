@@ -11,7 +11,7 @@ const intersectionObserver = atom<IntersectionObserver | null>(
         if (entry.isIntersecting) animateIn(element);
       }
     });
-  }, { threshold: 0.2 }) : null
+  }, { threshold: 0.1 }) : null
 );
 
 const disjunctionObserver = atom<IntersectionObserver | null>(
@@ -23,7 +23,7 @@ const disjunctionObserver = atom<IntersectionObserver | null>(
         if (!entry.isIntersecting) animateOut(element);
       }
     });
-  }, { threshold: 0.15 }) : null
+  }, { threshold: 0 }) : null
 );
 
 export const selectObserver = atom<Tuples<IntersectionObserver, 2> | null>((get) => {

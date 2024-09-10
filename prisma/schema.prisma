@@ -62,14 +62,15 @@ model Project {
   career       Career     @relation(fields: [careerId], references: [id], map: "FK_project_career_id")
   careerId     Int        @map("career_id")
 
-  portfolio    Portfolio? @relation(fields: [pathname], references: [pathname], map: "FK_portfolio_pathname")
-  pathname     String?    @map("pathname")
+  portfolio    Portfolio? @relation(fields: [portfolioId], references: [id], map: "FK_portfolio_id")
+  portfolioId  Int?       @map("portfolio_id")
 
   @@map("project")
 }
 
 model Portfolio {
-  pathname   String    @id @db.Text
+  id         Int       @id @default(autoincrement())
+  pathname   String    @db.Text
   pageId     String    @map("page_id") @db.Text
   coverImage String    @map("cover_image") @db.Text
   title      String    @db.Text
@@ -77,5 +78,6 @@ model Portfolio {
 
   project    Project[]
 
+  @@index([pathname], map: "idx_portfolio_pathname")
   @@map("portfolio")
 }

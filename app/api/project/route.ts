@@ -22,12 +22,27 @@ export const GET = async () => {
         }
       ],
       include: {
-        career: true,
-        portfolio: true
+        career: {
+          include: {
+            company: {
+              select: {
+                name: true
+              }
+            }
+          }
+        },
+        portfolio: true,
       }
     });
 
-  const serialized = projects.map((project) => periodSerializer(project, '진행중'));
+  const serialized = projects.map(({ 
+    careerId: _, 
+    career: { company }, 
+    ...project 
+  }) => ({
+    ...project,
+    companyName: company?.name
+  }));
 
   return NextResponse.json(serialized);
 }

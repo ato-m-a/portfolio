@@ -1,5 +1,4 @@
 import { z } from 'zod';
-import careerSchema from './career.schema';
 import portfolioSchema from './portfolio.schema';
 import linkedListSchema from './common/linkedList.schema';
 
@@ -13,8 +12,8 @@ const projectSchema = z.object({
   role: z.string(),
   participants: z.number(),
   detail: linkedListSchema,
-  career: careerSchema,
-  portfolio: portfolioSchema.optional()
+  companyName: z.string().nullable(),
+  portfolio: portfolioSchema.nullable()
 });
 
 export default projectSchema;

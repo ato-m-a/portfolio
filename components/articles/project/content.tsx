@@ -8,7 +8,7 @@ const ProjectContent: FC<ProjectSchema> = ({
   period,
   role,
   participants,
-  career: { companyName },
+  companyName,
   portfolio,
   detail
 }) => {

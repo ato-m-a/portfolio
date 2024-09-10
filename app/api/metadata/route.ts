@@ -4,6 +4,9 @@ import prisma from '@/common/prisma';
 
 export const dynamic = 'force-dynamic';
 
+/**
+ * @todo 나중에는 metadata 별도 관리하자
+ */
 export const GET = async () => {
   const queryOptions = {
     orderBy: { updatedAt: 'desc' as 'desc' },

@@ -4,10 +4,9 @@ import { AnimatedListItem, ResponsiveArticle } from '@/components/core';
 import { List } from '@/components/core';
 
 const ExperienceContent: FC<CareerSchema> = ({
-  company: { name: companyName, url: companyUrl },
+  company: { name: companyName, url: companyUrl, description },
   position,
   period,
-  description,
   detail,
 }) => {
   return (

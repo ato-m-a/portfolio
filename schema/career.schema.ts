@@ -8,7 +8,6 @@ const careerSchema = z.object({
   id: z.number(),
   position: z.string(),
   period: z.string(),
-  description: z.string(),
   detail: linkedListSchema,
   company: companySchema
 });

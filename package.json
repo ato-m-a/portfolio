@@ -15,6 +15,7 @@
     "@tanstack/react-query-devtools": "^5.55.0",
     "@toss/date": "^1.2.0",
     "@vercel/postgres": "^0.10.0",
+    "dayjs": "^1.11.13",
     "jotai": "^2.9.3",
     "katex": "^0.16.9",
     "ky": "^1.7.2",

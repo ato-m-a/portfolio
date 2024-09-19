@@ -1,5 +1,5 @@
 import type { FC } from 'react';
-import { TextHighlight } from '@/components/core';
+import { TextHighlight } from '@/components/misc';
 import Image from 'next/image';
 
 // asset

@@ -22,7 +22,7 @@ export default abstract class Repository<
   }
 
   update = async (index: INDEX, item: Omit<ENTITY, INDEX>): Promise<ENTITY> => {
-    return await this.httpClient.put(`${this.resource}/${index}`, item).json();
+    return await this.httpClient.put<ENTITY>(`${this.resource}/${index}`, item).json();
   }
 
   delete = async (index: INDEX_TYPE): Promise<KyResponse<void>> => {

@@ -7,6 +7,8 @@ import 'react-notion-x/src/styles.css';
 
 type Props = Required<PropsWithChildren>;
 
+export const revalidate = 60;
+
 const PortfolioLayout: FC<Props> = ({ children }) => (
   <Notion.wrapper>
     {children}

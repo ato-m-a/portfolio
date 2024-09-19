@@ -7,6 +7,8 @@ import Script from 'next/script';
 
 import '@/styles/globals.css';
 
+export const revalidate = 60;
+
 const pretendard = localFont({
   src: '../public/fonts/PretendardVariable.woff2',
   display: 'swap',

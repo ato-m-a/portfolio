@@ -1,10 +1,10 @@
 "use client";
 
-import { useCallback, type ReactElement } from 'react';
+import type { ReactElement } from 'react';
 import { Emoji } from '@/constants/emoji';
 
 const Navigation = (): ReactElement => {
-  const goTo = useCallback((id: string) => {
+  const goTo = (id: string) => {
     const element = document.getElementById(id);
 
     if (element) {
@@ -15,7 +15,7 @@ const Navigation = (): ReactElement => {
         behavior: 'smooth'
       });
     }
-  }, []);
+  };
 
   return (
     <div className="fixed p-2 bottom-4 right-6 max-md:right-4">

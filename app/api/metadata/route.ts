@@ -2,8 +2,6 @@ import { NextResponse } from 'next/server';
 import { kstFormat } from '@toss/date';
 import prisma from '@/common/prisma';
 
-export const dynamic = 'force-dynamic';
-
 /**
  * @todo 나중에는 metadata 별도 관리하자
  */

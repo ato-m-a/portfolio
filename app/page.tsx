@@ -13,8 +13,7 @@ const MainPage: NextPage = async () => {
   const dehydrated = await getDehydratedQuery([
     queryOptions.getSkills(),
     queryOptions.getCareers(),
-    queryOptions.getProjects(),
-    queryOptions.getMetadata()
+    queryOptions.getProjects()
   ]);
 
   return (

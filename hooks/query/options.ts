@@ -2,14 +2,15 @@
 import skillRepository from '@/repository/skill.repository';
 import careerRepository from '@/repository/career.repository';
 import projectRepository from '@/repository/project.repository';
-import metadataRepository from '@/repository/metadata.repository';
+
+// lib
+import { getLastUpdatedAt } from './lib';
 
 /** queryKeys */
 export const queryKeys = {
   getSkills: () => ['skill', 'list'],
   getCareers: () => ['career', 'list'],
-  getProjects: () => ['project', 'list'],
-  getMetadata: () => ['metadata']
+  getProjects: () => ['project', 'list']
 };
 
 /** queryOptions */
@@ -30,9 +31,12 @@ const queryOptions = {
     staleTime: 1000 * 60
   }),
   getMetadata: () => ({
-    queryKey: queryKeys.getMetadata(),
-    queryFn: () => metadataRepository.get(),
-    staleTime: 1000 * 60
+    queries: [
+      queryOptions.getSkills(),
+      queryOptions.getCareers(),
+      queryOptions.getProjects()
+    ],
+    combine: getLastUpdatedAt
   })
 };
 

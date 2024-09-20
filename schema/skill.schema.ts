@@ -7,7 +7,8 @@ const skillSchema = z.object({
   name: z.string(),
   icon: z.string(),
   contents: z.array(z.string()),
-  orderIndex: z.number()
+  orderIndex: z.number(),
+  updatedAt: z.string()
 });
 
 export default skillSchema;

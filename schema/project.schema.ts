@@ -13,7 +13,8 @@ const projectSchema = z.object({
   participants: z.number(),
   detail: linkedListSchema,
   companyName: z.string().nullable(),
-  portfolio: portfolioSchema.nullable()
+  portfolio: portfolioSchema.nullable(),
+  updatedAt: z.string()
 });
 
 export default projectSchema;

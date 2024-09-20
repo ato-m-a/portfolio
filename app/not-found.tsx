@@ -1,3 +1,4 @@
+import type { NextPage } from 'next';
 import { Comment, Figure } from '@/components/articles/not-found';
 import localFont from 'next/font/local';
 import Image from 'next/image';
@@ -9,7 +10,7 @@ const dejavuSansMono = localFont({
   variable: '--font-dejavu-sans-mono'
 });
 
-export default function NotFound() {
+const NotFound: NextPage = () => {
   return (
     <Figure>
       <div className="w-100 h-100 rounded-xl overflow-hidden shadow-xl border border-gray-300">
@@ -27,4 +28,6 @@ export default function NotFound() {
       </figcaption>
     </Figure>
   )
-}
+};
+
+export default NotFound;

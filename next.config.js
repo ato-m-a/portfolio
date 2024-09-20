@@ -39,7 +39,38 @@ const securityHeaders = [
     key: 'Permissions-Policy',
     value: 'camera=(), microphone=(), geolocation=()'
   }
-]
+];
+
+const apiRoutesCache = {
+  source: '/api/(.*)',
+  headers: [
+    {
+      key: 'Cache-Control',
+      value: 'no-store, must-revalidate'
+    }
+  ]
+};
+
+const pageRoutesCache = [
+  {
+    source: '/portfolio/:path*',
+    headers: [
+      {
+        key: 'Cache-Control',
+        value: 'public, max-age=60, stale-while-revalidate=30, stale-if-error=60'
+      }
+    ]
+  },
+  {
+    source: '/',
+    headers: [
+      {
+        key: 'Cache-Control',
+        value: 'public, max-age=60, stale-while-revalidate=30, stale-if-error=60'
+      }
+    ]
+  }
+];
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
@@ -52,10 +83,14 @@ const nextConfig = {
     return [
       {
         source: '/(.*)',
-        headers: securityHeaders
-      }
+        headers: [
+          ...securityHeaders
+        ]
+      },
+      apiRoutesCache,
+      ...pageRoutesCache
     ]
   }
-}
+};
 
 module.exports = nextConfig

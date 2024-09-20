@@ -4,7 +4,7 @@ import { ScrollSaver } from '@/components/common';
 import { Header, Article } from '@/components/layout';
 import { About, Skill, Experience, Project } from '@/components/articles';
 import { Navigation } from '@/components/controls';
-import { LastUpdated, DebugCache } from '@/components/misc';
+import { LastUpdated } from '@/components/misc';
 import { Emoji } from '@/constants/emoji';
 import queryOptions from '@/hooks/query/options';
 import getDehydratedQuery from '@/common/getDehydrated';
@@ -49,7 +49,6 @@ const MainPage: NextPage = async () => {
       <LastUpdated />
       <ScrollSaver />
       <Navigation />
-      <DebugCache />
     </HydrationBoundary>
   )
 }

@@ -1,18 +1,20 @@
 "use client";
 
-import type { ReactFC } from '@/types/components/fc';
+import type { FC, PropsWithChildren } from 'react';
 import { useRef } from 'react';
 import useAnimation from '@/hooks/useAnimation';
 
-const Figure: ReactFC = ({ children }) => {
+const Figure: FC<PropsWithChildren> = ({ children }) => {
   const figureRef = useRef<HTMLElement>(null);
   useAnimation(figureRef, true);
 
   return (
-    <figure className="w-screen h-screen bg-gray-100 flex flex-col justify-center items-center max-md:px-10" ref={figureRef}>
+    <figure className="min-w-screen min-h-screen bg-gray-100 flex flex-col justify-center items-center max-md:p-10" ref={figureRef}>
       {children}
     </figure>
   )
 }
+
+
 
 export default Figure;

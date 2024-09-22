@@ -19,7 +19,7 @@ const NotFound: NextPage = () => {
       <figcaption className="pt-10 flex flex-col justify-center items-center">
         <h1 className={`${dejavuSansMono.className} font-semibold text-9xl text-blue-500 py-4`}>404</h1>
         <Comment className="font-normal py-2 text-2xl text-gray-700" />
-        <p className="font-normal text-xl text-gray-700">
+        <p className="font-normal text-xl text-gray-700 text-center break-keep">
           경험을 더 쌓아서, 이 이야기도 들려드릴 수 있도록 할게요. 조금만 기다려주세요!
         </p>
         <Link href="/" className="hv-btn rounded-lg shadow-lg mt-6 px-8 py-3 bg-blue-500 text-white text-xl cursor-pointer transition-opacity ease-in-out">

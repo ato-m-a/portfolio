@@ -9,7 +9,7 @@ const Figure: FC<PropsWithChildren> = ({ children }) => {
   useAnimation(figureRef, true);
 
   return (
-    <figure className="min-w-screen min-h-screen bg-gray-100 flex flex-col justify-center items-center max-md:p-10" ref={figureRef}>
+    <figure className="min-w-screen min-h-screen bg-gray-100 flex flex-col justify-center items-center max-md:p-5 max-sm:p-10" ref={figureRef}>
       {children}
     </figure>
   )

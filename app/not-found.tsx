@@ -13,7 +13,7 @@ const dejavuSansMono = localFont({
 const NotFound: NextPage = () => {
   return (
     <Figure>
-      <div className="w-100 h-100 rounded-xl overflow-hidden shadow-xl border border-gray-300">
+      <div className="w-80 h-80 rounded-xl overflow-hidden shadow-xl border border-gray-300 max-sm:w-full max-sm:h-full">
         <Image src="/images/not-found.webp" alt="404" className="w-full h-full" width={500} height={500} priority={true} />
       </div>
       <figcaption className="pt-10 flex flex-col justify-center items-center">

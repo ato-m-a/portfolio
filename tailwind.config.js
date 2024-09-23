@@ -13,8 +13,9 @@ module.exports = {
       },
       screens: {
         'custom-lg' : '992px',
-        'max-lg': {'max': '992px'},
-        'max-md': {'max': '767px'}
+        'max-lg': {'max': '991px'},
+        'max-md': {'max': '768px'},
+        'max-sm': {'max': '480px'}
       },
       container: (theme) => ({
         center: true,

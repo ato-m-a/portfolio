@@ -6,6 +6,7 @@ import { About, Skill, Experience, Project } from '@/components/articles';
 import { Navigation } from '@/components/controls';
 import { LastUpdated } from '@/components/misc';
 import { Emoji } from '@/constants/emoji';
+import { trpc } from '@/common/trpc/server';
 import queryOptions from '@/hooks/query/options';
 import getDehydratedQuery from '@/common/getDehydrated';
 
@@ -15,6 +16,9 @@ const MainPage: NextPage = async () => {
     queryOptions.getCareers(),
     queryOptions.getProjects()
   ]);
+
+  const data = await trpc.ping.ping();
+  console.log(data);
 
   return (
     <HydrationBoundary state={dehydrated}>

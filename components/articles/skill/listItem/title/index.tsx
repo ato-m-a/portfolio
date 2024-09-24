@@ -1,5 +1,5 @@
-import type { FC } from 'react';
 import type { SkillSchema } from '@/schema/skill.schema';
+import { memo, type FC } from 'react';
 import Icon from './icon';
 
 type TitleProps = Pick<SkillSchema, 'name' | 'icon'>
@@ -13,4 +13,4 @@ const SkillTitle: FC<TitleProps> = ({ name, icon }) => {
   )
 }
 
-export default SkillTitle;
+export default memo(SkillTitle);

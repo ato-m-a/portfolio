@@ -1,11 +1,11 @@
 "use client";
 
 import type { FC } from 'react';
-import { useProjects } from '@/hooks/query';
+import trpc from '@trpc.client';
 import ProjectContent from './content';
 
 const Project: FC = () => {
-  const { data } = useProjects();
+  const { data } = trpc.project.getMany.useQuery();
 
   return (
     <ul className="flex flex-col">

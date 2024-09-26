@@ -76,6 +76,8 @@ const pageRoutesCache = [
 const nextConfig = {
   webpack: (config) => {
     config.resolve.alias['@'] = path.resolve(__dirname, '.');
+    config.resolve.alias['@trpc.server'] = path.resolve(__dirname, './common/trpc/server');
+    config.resolve.alias['@trpc.client'] = path.resolve(__dirname, './common/trpc/client');
 
     return config;
   },
@@ -93,4 +95,4 @@ const nextConfig = {
   }
 };
 
-module.exports = nextConfig
+module.exports = nextConfig;

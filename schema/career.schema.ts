@@ -10,7 +10,7 @@ const careerSchema = z.object({
   period: z.string(),
   detail: linkedListSchema,
   company: companySchema,
-  updatedAt: z.string()
+  updatedAt: z.date()
 });
 
 export default careerSchema;

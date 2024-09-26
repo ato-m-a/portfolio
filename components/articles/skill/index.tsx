@@ -1,15 +1,11 @@
 "use client";
 
 import type { FC } from 'react';
-import { useSkills } from '@/hooks/query';
-import { trpc } from '@/common/trpc/client';
+import trpc from '@trpc.client';
 import ListItem from './listItem'
 
 const Skill: FC = () => {
-  const { data } = useSkills();
-  const { data: ping } = trpc.ping.ping.useQuery();
-
-  console.log(ping);
+  const { data } = trpc.skill.getMany.useQuery();
 
   return (
     <ul className="w-full">

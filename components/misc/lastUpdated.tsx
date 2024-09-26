@@ -1,16 +1,23 @@
 "use client";
 
 import type { FC } from 'react';
-import { useMetadata } from '@/hooks/query';
+import { getLastUpdatedAt } from '@/hooks/query/lib';
+import trpc from '@trpc.client';
 
 const LastUpdated: FC = () => {
-  const data = useMetadata();
+  const data = trpc.useQueries((t) => [
+    t.skill.getMany(),
+    t.career.getMany(),
+    t.project.getMany(),
+  ]);
 
   if (!data) return null;
 
+  const lastUpdated = getLastUpdatedAt(data);
+
   return (
     <div className="fixed font-thin p-2 bottom-2 left-2 max-md:text-sm">
-      <p>{data}</p>
+      <p>{lastUpdated}</p>
     </div>
   )
 }

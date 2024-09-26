@@ -1,7 +1,7 @@
 import type { UseQueryResult } from '@tanstack/react-query';
 import { kstFormat } from '@toss/date';
 
-type CommonQuery = UseQueryResult<Array<{ updatedAt: string } & Record<string, any>>>;
+type CommonQuery = UseQueryResult<Array<{ updatedAt: Date } & Record<string, any>>>;
 
 const getLastUpdatedAt = (queries: CommonQuery[]) => {
   const flatted = queries

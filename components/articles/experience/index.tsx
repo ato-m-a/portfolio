@@ -1,11 +1,11 @@
 "use client";
 
 import type { FC } from 'react';
-import { useCareers } from '@/hooks/query';
+import trpc from '@trpc.client';
 import ExperienceContent from './content';
 
 const Experience: FC = () => {
-  const { data } = useCareers();
+  const { data } = trpc.career.getMany.useQuery();
 
   return (
     <ul className="flex flex-col">

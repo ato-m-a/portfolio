@@ -8,7 +8,7 @@ const skillSchema = z.object({
   icon: z.string(),
   contents: z.array(z.string()),
   orderIndex: z.number(),
-  updatedAt: z.string()
+  updatedAt: z.date()
 });
 
 export default skillSchema;

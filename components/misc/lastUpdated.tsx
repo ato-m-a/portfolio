@@ -1,7 +1,7 @@
 "use client";
 
 import type { FC } from 'react';
-import { getLastUpdatedAt } from '@/hooks/query/lib';
+import getLastUpdatedAt from '@/common/getLastUpdatedAt';
 import trpc from '@trpc.client';
 
 const LastUpdated: FC = () => {

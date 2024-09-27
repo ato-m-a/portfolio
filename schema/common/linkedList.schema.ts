@@ -11,7 +11,7 @@ export type LinkedListSchema = z.infer<typeof baseLinkedListSchema> & {
 
 const linkedListSchema: z.ZodType<LinkedListSchema> = baseLinkedListSchema.extend({
   next: z.lazy(() => linkedListSchema.optional()),
-  subItems: z.lazy(() => linkedListSchema.optional())
+  indent: z.lazy(() => linkedListSchema.optional())
 });
 
 export default linkedListSchema;

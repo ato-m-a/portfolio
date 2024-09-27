@@ -24,8 +24,7 @@ export const getDateDistance = (startDate: Date, endDate: Date | null, fallback?
   const dateRange = [
     { value: years, suffix: '년' },
     { value: months % 12, suffix: '개월' }
-  ].filter(({ value }) => value > 0)
-    .map(({ value, suffix }) => `${value}${suffix}`)
+  ].flatMap(({ value, suffix }) => value > 0 ? `${value}${suffix}` : [])
     .join(' ');
 
   return `${startFromEnd} (${dateRange})`;

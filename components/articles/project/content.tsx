@@ -18,8 +18,15 @@ const ProjectContent: FC<ProjectSchema> = ({
         <ResponsiveArticle.title>
           {
             portfolio
-              ? <Link className="inline-block hv-underline text-xl my-2 text-blue-900 cursor-pointer" href={`/portfolio/${portfolio.pathname}`}>{name}</Link>
-              : <h3 className="text-xl my-2">{name}</h3>
+              ? (
+                <Link 
+                  className="inline-block hv-underline text-xl my-2 text-blue-900 cursor-pointer" 
+                  href={portfolio.pathname}
+                  passHref
+                >
+                  {name}
+                </Link>
+              ) : <h3 className="text-xl my-2">{name}</h3>
           }
           <p className="text-lg font-light">
             {companyName} <span className="text-lg">({participants}명)</span>

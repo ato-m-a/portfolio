@@ -1,23 +1,19 @@
 import type { NextPage } from 'next';
-import { dehydrate, HydrationBoundary } from '@tanstack/react-query';
+import { HydrationBoundary } from '@tanstack/react-query';
 import { ScrollSaver } from '@/components/common';
 import { Header, Article } from '@/components/layout';
 import { About, Skill, Experience, Project } from '@/components/articles';
 import { Navigation } from '@/components/controls';
 import { LastUpdated } from '@/components/misc';
 import { Emoji } from '@/constants/emoji';
-import { createHelpers } from '@trpc.server';
+import getDehydrated from '@/common/getDehydrated';
 
 const MainPage: NextPage = async () => {
-  const helpers = createHelpers();
-
-  await Promise.all([
+  const dehydrated = await getDehydrated((helpers) => [
     helpers.skill.getMany.prefetch(),
     helpers.career.getMany.prefetch(),
     helpers.project.getMany.prefetch()
-  ]);
-
-  const dehydrated = dehydrate(helpers.queryClient);
+  ])
 
   return (
     <HydrationBoundary state={dehydrated}>

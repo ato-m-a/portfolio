@@ -19,6 +19,16 @@ model Skill {
   @@map("skill")
 }
 
+model Tag {
+  id              Int    @id @default(autoincrement())
+  label           String @unique @db.Text
+  fontColor       String @map("font_color") @db.Text
+  backgroundColor String @map("background_color") @db.Text
+  
+  @@index([label], map: "idx_tag_label")
+  @@map("tag")
+}
+
 model Company {
   id          Int      @id @default(autoincrement())
   name        String   @db.Text

@@ -19,6 +19,18 @@ model Skill {
   @@map("skill")
 }
 
+model Tag {
+  id              Int       @id @default(autoincrement())
+  label           String    @unique @db.Text
+  fontColor       String    @map("font_color") @db.Text
+  backgroundColor String    @map("background_color") @db.Text
+
+  projectTags     ProjectTag[]
+  
+  @@index([label], map: "idx_tag_label")
+  @@map("tag")
+}
+
 model Company {
   id          Int      @id @default(autoincrement())
   name        String   @db.Text
@@ -59,6 +71,8 @@ model Project {
   detail       Json       @db.Json
   updatedAt    DateTime   @map("updated_at") @updatedAt @default(now())
 
+  projectTags  ProjectTag[]
+
   career       Career     @relation(fields: [careerId], references: [id], map: "FK_project_career_id")
   careerId     Int        @map("career_id")
 
@@ -80,4 +94,16 @@ model Portfolio {
 
   @@index([pathname], map: "idx_portfolio_pathname")
   @@map("portfolio")
+}
+
+model ProjectTag {
+  id        Int     @id @default(autoincrement())
+
+  project   Project @relation(fields: [projectId], references: [id], map: "FK_project_id")
+  projectId Int     @map("project_id")
+
+  tag       Tag     @relation(fields: [tagId], references: [id], map: "FK_tag_id")
+  tagId     Int     @map("tag_id")
+
+  @@map("project_tag")
 }

@@ -1,3 +1,32 @@
 {
-  "extends": "next/core-web-vitals"
+  "root": true,
+  "extends": [
+    "next",
+    "next/core-web-vitals",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:prettier/recommended"
+  ],
+  "parser": "@typescript-eslint/parser",
+  "plugins": ["@typescript-eslint", "prettier"],
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "ecmaVersion": 2023,
+    "sourceType": "module",
+    "project": "./tsconfig.json"
+  },
+  "env": {
+    "browser": true,
+    "node": true,
+    "es2022": true
+  },
+  "rules": {
+    "react/react-in-jsx-scope": "off",
+    "react/jsx-filename-extension": [1, { "extensions": [".tsx"] }],
+    "@typescript-eslint/explicit-function-return-type": "off", // 함수 반환 타입을 강제하지 않음
+    "@typescript-eslint/no-unused-vars": ["error", { "argsIgnorePattern": "^_" }], // 사용하지 않는 변수 규칙
+    "import/prefer-default-export": "off",
+    "prettier/prettier": "error"
+  }
 }

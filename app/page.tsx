@@ -1,6 +1,5 @@
 import type { NextPage } from 'next';
 import { HydrationBoundary } from '@tanstack/react-query';
-import { ScrollSaver } from '@/components/common';
 import { Header, Article } from '@/components/layout';
 import { About, Skill, Experience, Project } from '@/components/articles';
 import { Navigation } from '@/components/controls';
@@ -45,7 +44,6 @@ const MainPage: NextPage = async () => {
         />
       </main>
       <LastUpdated />
-      <ScrollSaver />
       <Navigation />
     </HydrationBoundary>
   )

@@ -1,96 +1,45 @@
+const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
+const securityHeaders = require('./config/security.headers');
+const cacheControlHeaders = require('./config/cache-control.headers');
 const path = require('path');
 
-const ConentSecurityPolicy = `
-  default-src 'self';
-  script-src 'self' 'unsafe-eval' 'unsafe-inline' www.googletagmanager.com www.google-analytics.com;
-  style-src 'self' 'unsafe-inline';
-  img-src * blob: data:;
-  connect-src *;
-  font-src 'self';
-  frame-src 'self';
-`;
-
-const securityHeaders = [
-  {
-    key: 'Content-Security-Policy',
-    value: ConentSecurityPolicy.replace(/\n/g, '')
-  },
-  {
-    key: 'Referrer-Policy',
-    value: 'strict-origin-when-cross-origin'
-  },
-  {
-    key: 'X-Frame-Options',
-    value: 'DENY'
-  },
-  {
-    key: 'X-Content-Type-Options',
-    value: 'nosniff'
-  },
-  {
-    key: 'X-DNS-Prefetch-Control',
-    value: 'on'
-  },
-  {
-    key: 'Strict-Transport-Security',
-    value: 'max-age=31536000; includeSubDomains; preload'
-  },
-  {
-    key: 'Permissions-Policy',
-    value: 'camera=(), microphone=(), geolocation=()'
-  }
-];
-
-const apiRoutesCache = {
-  source: '/api/(.*)',
-  headers: [
-    {
-      key: 'Cache-Control',
-      value: 'no-store, must-revalidate'
-    }
-  ]
-};
-
-const pageRoutesCache = [
-  {
-    source: '/portfolio/:path*',
-    headers: [
-      {
-        key: 'Cache-Control',
-        value: 'public, max-age=60, stale-while-revalidate=30, stale-if-error=60'
-      }
-    ]
-  },
-  {
-    source: '/',
-    headers: [
-      {
-        key: 'Cache-Control',
-        value: 'public, max-age=60, stale-while-revalidate=30, stale-if-error=60'
-      }
-    ]
-  }
-];
+const ANALYZE_MODE = process.env.ANALYZE;
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  webpack: (config) => {
+  reactStrictMode: true,
+  swcMinify: true,
+  webpack: (config, { isServer }) => {
     config.resolve.alias['@'] = path.resolve(__dirname, '.');
     config.resolve.alias['@trpc.server'] = path.resolve(__dirname, './common/trpc/server');
     config.resolve.alias['@trpc.client'] = path.resolve(__dirname, './common/trpc/client');
+
+    if (!isServer && ANALYZE_MODE) {
+      const analyzerConfig = { openAnalyzer: true };
+      const analyzerReportFilename = 'bundle-analyzer-report';
+  
+      switch (ANALYZE_MODE) {
+        // static html report
+        case '1':
+          analyzerConfig.analyzerMode = 'static';
+          analyzerConfig.reportFilename = `${analyzerReportFilename}.html`;
+          break;
+        // json report
+        case '2':
+          analyzerConfig.analyzerMode = 'json';
+          analyzerConfig.reportFilename = `${analyzerReportFilename}.json`;
+          break;
+      }
+  
+      config.plugins.push(new BundleAnalyzerPlugin(analyzerConfig));
+    };
 
     return config;
   },
   async headers() {
     return [
-      {
-        source: '/(.*)',
-        headers: [
-          ...securityHeaders
-        ]
-      },
-      apiRoutesCache,
-      ...pageRoutesCache
+      securityHeaders,
+      ...cacheControlHeaders
     ]
   }
 };

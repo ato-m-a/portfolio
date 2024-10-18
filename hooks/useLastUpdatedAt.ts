@@ -1,4 +1,4 @@
-"use client";
+'use client';
 
 import trpc from '@trpc.client';
 import getLastUpdatedAt from '@/common/getLastUpdatedAt';
@@ -13,6 +13,6 @@ const useLastUpdatedAt = () => {
   if (!queries) return null;
 
   return getLastUpdatedAt(queries);
-}
+};
 
 export default useLastUpdatedAt;

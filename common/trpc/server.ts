@@ -5,10 +5,11 @@ import superjson from 'superjson';
 
 const trpc = createCaller(createContext());
 
-export const createHelpers = () => createServerSideHelpers({
-  router: appRouter,
-  ctx: createContext(),
-  transformer: superjson
-});
+export const createHelpers = () =>
+  createServerSideHelpers({
+    router: appRouter,
+    ctx: createContext(),
+    transformer: superjson,
+  });
 
 export default trpc;

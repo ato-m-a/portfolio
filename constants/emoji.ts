@@ -3,4 +3,4 @@ export const enum Emoji {
   star = '🌟',
   briefcase = '💼',
   rocket = '🚀',
-};
+}

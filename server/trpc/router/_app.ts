@@ -8,7 +8,7 @@ import { skillRouter } from './skill';
 export const appRouter = t.router({
   skill: skillRouter,
   career: careerRouter,
-  project: projectRouter
+  project: projectRouter,
 });
 
 export const createCaller = t.createCallerFactory(appRouter);

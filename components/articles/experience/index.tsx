@@ -1,4 +1,4 @@
-"use client";
+'use client';
 
 import type { FC } from 'react';
 import trpc from '@trpc.client';
@@ -9,11 +9,9 @@ const Experience: FC = () => {
 
   return (
     <ul className="flex flex-col">
-      {data && data.map((career) => (
-        <ExperienceContent key={career.id} {...career} />
-      ))}
+      {data && data.map((career) => <ExperienceContent key={career.id} {...career} />)}
     </ul>
-  )
-}
+  );
+};
 
 export default Experience;

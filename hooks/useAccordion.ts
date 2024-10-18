@@ -10,6 +10,6 @@ const useAccordion = (key: symbol) => {
   const toggle = () => setIsActive((prev) => !prev);
 
   return { isActive, toggle } as const;
-}
+};
 
 export default useAccordion;

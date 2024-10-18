@@ -14,7 +14,7 @@ const projectSchema = z.object({
   detail: linkedListSchema,
   companyName: z.string().nullable(),
   portfolio: portfolioSchema.nullable(),
-  updatedAt: z.date()
+  updatedAt: z.date(),
 });
 
 export default projectSchema;

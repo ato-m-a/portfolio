@@ -8,7 +8,7 @@ const portfolioSchema = z.object({
   pageId: z.string(),
   coverImage: z.string(),
   title: z.string(),
-  updatedAt: z.date()
+  updatedAt: z.date(),
 });
 
 export default portfolioSchema;

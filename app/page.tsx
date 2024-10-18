@@ -11,8 +11,8 @@ const MainPage: NextPage = async () => {
   const dehydrated = await getDehydrated((helpers) => [
     helpers.skill.getMany.prefetch(),
     helpers.career.getMany.prefetch(),
-    helpers.project.getMany.prefetch()
-  ])
+    helpers.project.getMany.prefetch(),
+  ]);
 
   return (
     <HydrationBoundary state={dehydrated}>
@@ -24,19 +24,19 @@ const MainPage: NextPage = async () => {
           subtitle="저를 소개해 드릴게요 !"
           content={<About />}
         />
-        <Article 
+        <Article
           id="skill"
           title={`${Emoji.star} Skill`}
           subtitle="업무에 사용 중이거나, 사용 경험이 있는 기술들이에요 !"
           content={<Skill />}
         />
-        <Article 
+        <Article
           id="experience"
           title={`${Emoji.briefcase} Experience`}
           subtitle="제가 쌓아온 경험들을 보여드릴게요 !"
           content={<Experience />}
         />
-        <Article 
+        <Article
           id="project"
           title={`${Emoji.rocket} Project`}
           subtitle="지금까지 이런 프로젝트를 해왔어요 !"
@@ -46,7 +46,7 @@ const MainPage: NextPage = async () => {
       <LastUpdated />
       <Navigation />
     </HydrationBoundary>
-  )
-}
+  );
+};
 
 export default MainPage;

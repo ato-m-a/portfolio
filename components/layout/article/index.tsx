@@ -9,7 +9,7 @@ const Article: FC<ArticleProps> = ({ title, subtitle, content, ...props }) => {
       <ArticleHeader title={title} subtitle={subtitle} />
       {content}
     </ArticleWrapper>
-  )
-}
+  );
+};
 
 export default Article;

@@ -8,5 +8,5 @@ export interface Repository<T> {
   getOne(): {
     by: (options: By<T>) => ReturnType<Repository<T>['getOne']>;
     execute: () => T | null;
-  }
+  };
 }

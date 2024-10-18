@@ -1,4 +1,4 @@
-"use client";
+'use client';
 
 import type { FC } from 'react';
 import trpc from '@trpc.client';
@@ -11,7 +11,7 @@ const Project: FC = () => {
     <ul className="flex flex-col">
       {data && data.map((project) => <ProjectContent key={project.name} {...project} />)}
     </ul>
-  )
-}
+  );
+};
 
 export default Project;

@@ -1,4 +1,4 @@
-"use server";
+'use server';
 
 import { dehydrate } from '@tanstack/react-query';
 import { createHelpers } from './trpc/server';
@@ -8,9 +8,9 @@ type Queries = (helpers: Helpers) => Promise<void>[];
 
 /**
  * tRPC procedure를 병렬로 실행하고 Dynamic rendering을 위한 dehydrated state를 반환합니다.
- * 
+ *
  * @param queries serverSideHelpers를 인자로 전달하여 병렬로 실행할 procedure query 배열을 전달합니다.
- * 
+ *
  * @example
  * const dehydrated = await getDehydrated((helpers) => [
  *   helpers.skill.getMany.prefetch(),

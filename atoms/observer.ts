@@ -3,27 +3,37 @@ import { animateIn, animateOut } from '@/common/animation';
 import { atom } from 'jotai';
 
 const intersectionObserver = atom<IntersectionObserver | null>(
-  typeof window !== 'undefined' ? new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
-      const element = entry.target;
+  typeof window !== 'undefined'
+    ? new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            const element = entry.target;
 
-      if (element instanceof HTMLElement) {
-        if (entry.isIntersecting) animateIn(element);
-      }
-    });
-  }, { threshold: 0.1 }) : null
+            if (element instanceof HTMLElement) {
+              if (entry.isIntersecting) animateIn(element);
+            }
+          });
+        },
+        { threshold: 0.1 },
+      )
+    : null,
 );
 
 const disjunctionObserver = atom<IntersectionObserver | null>(
-  typeof window !== 'undefined' ? new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
-      const element = entry.target;
+  typeof window !== 'undefined'
+    ? new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            const element = entry.target;
 
-      if (element instanceof HTMLElement) {
-        if (!entry.isIntersecting) animateOut(element);
-      }
-    });
-  }, { threshold: 0 }) : null
+            if (element instanceof HTMLElement) {
+              if (!entry.isIntersecting) animateOut(element);
+            }
+          });
+        },
+        { threshold: 0 },
+      )
+    : null,
 );
 
 export const selectObserver = atom<Tuples<IntersectionObserver, 2> | null>((get) => {

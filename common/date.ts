@@ -1,19 +1,19 @@
-import {
-  kstFormat,
-  getDateDistance as tossGetDateDistance,
-} from '@toss/date';
+import { kstFormat, getDateDistance as tossGetDateDistance } from '@toss/date';
 
 /**
  * @description toss/date의 getDateDistance를 랩핑해 Y년 M개월 형식의 텍스트를 리턴
  * @returns string
  * @example '1년 2개월'
  */
-export const getDateDistance = (startDate: Date, endDate: Date | null, fallback?: string): string => {
-  const startFromEnd = [
-    startDate,
-    endDate
-  ].map((date) => date ? kstFormat(date, 'yyyy.MM') : '현재').join(' ~ ');
-  
+export const getDateDistance = (
+  startDate: Date,
+  endDate: Date | null,
+  fallback?: string,
+): string => {
+  const startFromEnd = [startDate, endDate]
+    .map((date) => (date ? kstFormat(date, 'yyyy.MM') : '현재'))
+    .join(' ~ ');
+
   if (!endDate) return `${startFromEnd} (${fallback ?? '진행중'})`;
 
   const timeUnits = tossGetDateDistance(startDate, endDate);
@@ -23,9 +23,10 @@ export const getDateDistance = (startDate: Date, endDate: Date | null, fallback?
 
   const dateRange = [
     { value: years, suffix: '년' },
-    { value: months % 12, suffix: '개월' }
-  ].flatMap(({ value, suffix }) => value > 0 ? `${value}${suffix}` : [])
+    { value: months % 12, suffix: '개월' },
+  ]
+    .flatMap(({ value, suffix }) => (value > 0 ? `${value}${suffix}` : []))
     .join(' ');
 
   return `${startFromEnd} (${dateRange})`;
-}
+};

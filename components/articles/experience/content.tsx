@@ -15,7 +15,12 @@ const ExperienceContent: FC<CareerSchema> = ({
         <ResponsiveArticle.title>
           <h3 className="text-4xl my-2">{companyName}</h3>
           {companyUrl && (
-            <a href={companyUrl} target="_blank" rel="noreferer noopener" className="hv-underline text-xl block italic font-thin w-fit">
+            <a
+              href={companyUrl}
+              target="_blank"
+              rel="noreferer noopener"
+              className="hv-underline text-xl block italic font-thin w-fit"
+            >
               {companyUrl}
             </a>
           )}
@@ -30,7 +35,7 @@ const ExperienceContent: FC<CareerSchema> = ({
         </ResponsiveArticle.content>
       </ResponsiveArticle>
     </AnimatedListItem>
-  )
-}
+  );
+};
 
 export default ExperienceContent;

@@ -1,4 +1,4 @@
-"use client";
+'use client';
 
 import { useRef, type FC, type PropsWithChildren } from 'react';
 import { QueryClientProvider, QueryClient } from '@tanstack/react-query';
@@ -16,10 +16,10 @@ const QueryProvider: FC<PropsWithChildren> = ({ children }) => {
         customLink,
         httpBatchLink({
           url: '/api/trpc',
-          transformer: superjson
+          transformer: superjson,
         }),
-      ]
-    })
+      ],
+    }),
   );
 
   const queryClientRef = useRef<QueryClient>(
@@ -27,9 +27,9 @@ const QueryProvider: FC<PropsWithChildren> = ({ children }) => {
       defaultOptions: {
         queries: {
           staleTime: STALE_TIME,
-        }
-      }
-    })
+        },
+      },
+    }),
   );
 
   return (
@@ -39,7 +39,7 @@ const QueryProvider: FC<PropsWithChildren> = ({ children }) => {
         <ReactQueryDevtools initialIsOpen={false} />
       </QueryClientProvider>
     </trpc.Provider>
-  )
-}
+  );
+};
 
 export default QueryProvider;

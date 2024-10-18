@@ -1,7 +1,7 @@
 import { z } from 'zod';
 
 const baseLinkedListSchema = z.object({
-  content: z.string()
+  content: z.string(),
 });
 
 export type LinkedListSchema = z.infer<typeof baseLinkedListSchema> & {
@@ -11,7 +11,7 @@ export type LinkedListSchema = z.infer<typeof baseLinkedListSchema> & {
 
 const linkedListSchema: z.ZodType<LinkedListSchema> = baseLinkedListSchema.extend({
   next: z.lazy(() => linkedListSchema.optional()),
-  indent: z.lazy(() => linkedListSchema.optional())
+  indent: z.lazy(() => linkedListSchema.optional()),
 });
 
 export default linkedListSchema;

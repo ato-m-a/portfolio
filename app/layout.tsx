@@ -11,7 +11,7 @@ export const revalidate = 60;
 const pretendard = localFont({
   src: '../public/fonts/PretendardVariable.woff2',
   display: 'swap',
-  variable: '--font-pretendard'
+  variable: '--font-pretendard',
 });
 
 export const metadata: Metadata = {
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
   description: '주니어 웹 프론트엔드 개발자 홍준혁입니다. 찾아주셔서 감사합니다!',
   title: '홍준혁 | 웹 프론트엔드 개발자',
   icons: {
-    icon: './favicon.ico'
+    icon: './favicon.ico',
   },
   openGraph: {
     type: 'website',
@@ -33,7 +33,7 @@ export const metadata: Metadata = {
       width: 1080,
       height: 1080,
       alt: '홍준혁 | 웹 프론트엔드 개발자',
-    }
+    },
   },
   twitter: {
     card: 'summary',
@@ -45,9 +45,9 @@ export const metadata: Metadata = {
       width: 1080,
       height: 1080,
       alt: '홍준혁 | 웹 프론트엔드 개발자',
-    }
-  }
-}
+    },
+  },
+};
 
 export default function RootLayout({ children }: LayoutProps) {
   return (
@@ -69,11 +69,9 @@ export default function RootLayout({ children }: LayoutProps) {
       </head>
       <body className={`bg-gray-100 ${pretendard.className}`}>
         <AtomProvider>
-          <QueryProvider>
-            {children}
-          </QueryProvider>
+          <QueryProvider>{children}</QueryProvider>
         </AtomProvider>
       </body>
     </html>
-  )
+  );
 }

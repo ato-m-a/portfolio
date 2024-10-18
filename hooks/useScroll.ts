@@ -25,4 +25,4 @@ export const useScroll = (height: number) => {
   }, []);
 
   return scrolled;
-}
+};

@@ -1,18 +1,14 @@
-"use client";
+'use client';
 
 import type { ArticleProps } from './types';
-import {
-  useRef,
-  type FC,
-  type PropsWithChildren
-} from 'react';
+import { useRef, type FC, type PropsWithChildren } from 'react';
 import useAnimation from '@/hooks/useAnimation';
 
 type Props = PropsWithChildren<Omit<ArticleProps, 'title' | 'subtitle' | 'content'>>;
 
 const ArticleWrapper: FC<Props> = ({ children, className, id, ...props }) => {
   const sectionRef = useRef<HTMLDivElement | null>(null);
-  
+
   useAnimation(sectionRef);
 
   return (
@@ -21,7 +17,7 @@ const ArticleWrapper: FC<Props> = ({ children, className, id, ...props }) => {
         {children}
       </div>
     </section>
-  )
-}
+  );
+};
 
 export default ArticleWrapper;

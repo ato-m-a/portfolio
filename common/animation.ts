@@ -32,7 +32,7 @@ export const animateIn = (element: HTMLElement) => {
 
 export const animateOut = (element: HTMLElement) => {
   let start: number | null = null;
-  
+
   const step = (timestamp: number) => {
     if (!start) start = timestamp;
     const progress = timestamp - start;
@@ -46,7 +46,7 @@ export const animateOut = (element: HTMLElement) => {
     if (progress < duration) {
       window.requestAnimationFrame(step);
     }
-  }
+  };
 
   window.requestAnimationFrame(step);
-}
+};
